@@ -59,6 +59,8 @@ education:
     date_start: '2016-09-01'
     date_end: '2020-05-01'
 
+courses: []
+
 skills:
   - name: Research
     items:
@@ -98,8 +100,8 @@ skills:
         icon_pack: fas
 ---
 
-Ananya D is a researcher and entrepreneur at the intersection of **AI systems**, **trustworthy AI**, and **digital identity**. She is currently pursuing a PhD in Computer Science at [Institution], where her research spans AI auditing methodologies, digital identity in the age of synthetic media, and the societal implications of AI automation.
+Ananya D is a researcher and entrepreneur at the intersection of **AI systems**, **trustworthy AI**, and **digital identity**. She is currently pursuing a PhD in Computer Science at [Institution][...]
 
-Alongside her academic work, she co-founded [Startup Name], building responsible AI deployment tools for enterprise. Her research has been published at venues including FAccT, CHI, CSCW, and *Nature Machine Intelligence*.
+Alongside her academic work, she co-founded [Startup Name], building responsible AI deployment tools for enterprise. Her research has been published at venues including FAccT, CHI, CSCW, and *Nat[...]
 
-She serves as a reviewer for leading AI and HCI venues, and actively engages with policymakers, practitioners, and civil society on AI governance challenges. She is passionate about making AI safety research practical and accessible.
+She serves as a reviewer for leading AI and HCI venues, and actively engages with policymakers, practitioners, and civil society on AI governance challenges. She is passionate about making AI saf[...]
