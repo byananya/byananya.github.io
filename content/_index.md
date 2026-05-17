@@ -83,8 +83,7 @@ sections:
     content:
       title: Talks & Media
       text: |
-        *[TALK_TITLE]*, [VENUE], [DATE] — [DESCRIPTION_OR_LINK]\
-        *[INTERVIEW_OR_PRESS_TITLE]*, [OUTLET], [DATE] — [LINK]
+        TBD
     design:
       columns: '1'
 
@@ -93,24 +92,24 @@ sections:
     content:
       title: Contact
       text: 'Feel free to reach out for research collaborations, speaking invitations, or general inquiries.'
-      email: '[YOUR_EMAIL]'
+      email: 'TBD'
       contact_links:
         - icon: twitter
           icon_pack: fab
           name: Twitter / X
-          link: 'https://twitter.com/[YOUR_HANDLE]'
+          link: 'https://twitter.com/TBD'
         - icon: google-scholar
           icon_pack: ai
           name: Google Scholar
-          link: 'https://scholar.google.com/citations?user=[YOUR_SCHOLAR_ID]'
+          link: 'https://scholar.google.com/citations?user=TBD'
         - icon: github
           icon_pack: fab
           name: GitHub
-          link: 'https://github.com/[YOUR_GITHUB]'
+          link: 'https://github.com/TBD'
         - icon: linkedin
           icon_pack: fab
           name: LinkedIn
-          link: 'https://www.linkedin.com/in/[YOUR_LINKEDIN]'
+          link: 'https://www.linkedin.com/in/TBD'
     design:
       columns: '1'
 ---
