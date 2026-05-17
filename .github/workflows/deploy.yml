@@ -56,8 +56,6 @@ jobs:
         with:
           path: /tmp/hugo_cache
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.mod') }}
-          restore-keys: |
-            ${{ runner.os }}-hugomod-
 
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
@@ -67,7 +65,9 @@ jobs:
           HUGO_CACHEDIR: /tmp/hugo_cache
           GONOSUMDB: '*'
           GOFLAGS: '-mod=mod'
-        run: hugo mod tidy
+        run: |
+          rm -rf /tmp/hugo_cache
+          hugo mod tidy
 
       - name: Build with Hugo
         env:
