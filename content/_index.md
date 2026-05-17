@@ -41,15 +41,13 @@ sections:
     content:
       title: Venture / Startup
       text: |
-        **[STARTUP_NAME]** &nbsp;·&nbsp; [YOUR_ROLE] &nbsp;·&nbsp; [STAGE]
+        **Pulse AI** &nbsp;·&nbsp; Founder &nbsp;·&nbsp; Stealth
 
-        [STARTUP_NAME] [WHAT_IT_DOES]. The company is grounded in the same research problems I study academically — bridging trustworthy AI, digital identity, and human-AI interaction from theory to production systems.
+        Pulse AI is building in the space of AI-driven identity outreach, grounded in the same research problems I study academically — trustworthy AI, digital identity, and how people and institutions navigate AI-mediated interactions.
 
-        - **Role:** [YOUR_ROLE] — [KEY_RESPONSIBILITIES]
-        - **Traction / Outcome:** [OUTCOME_OR_TRACTION]
-        - **Research connection:** Building and deploying [STARTUP_NAME] surfaced real-world failure modes in [RESEARCH_AREA] that academic benchmarks miss — directly shaping my PhD research agenda
-
-        [Website →]([WEBSITE]) &nbsp;·&nbsp; [Press →]([PRESS_LINK]) &nbsp;·&nbsp; [GitHub →]([GITHUB])
+        - **Role:** Founder — TBD
+        - **Traction / Outcome:** TBD
+        - **Research connection:** Building Pulse AI surfaced real-world failure modes in AI identity systems that academic benchmarks miss — directly shaping my PhD research agenda
     design:
       columns: '1'
 
