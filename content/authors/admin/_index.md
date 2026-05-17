@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Admin
+title: Ananya D
 
 # Username (this should match the folder name)
 authors:
@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: ''
+role: AI Researcher and Founder
 
 # Organizations/Affiliations
 organizations:
@@ -18,7 +18,7 @@ organizations:
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: ''
+bio: Researching trustworthy AI, digital identity, generative media, and human-AI interaction.
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -26,13 +26,19 @@ bio: ''
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:your-email@example.com'
+    link: 'mailto:ananya@example.com'
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com
   - icon: github
     icon_pack: fab
     link: https://github.com
+  - icon: google-scholar
+    icon_pack: ai
+    link: https://scholar.google.com
+  - icon: twitter
+    icon_pack: fab
+    link: https://twitter.com
 
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/uploads/resume.pdf`, uncomment the lines below.
@@ -44,10 +50,10 @@ social:
 email: ''
 
 # Highlight the author in author lists? (true/false)
-highlight_name: false
+highlight_name: true
 
 # Organizational groups that you belong to
 user_groups: []
 ---
 
-Add your biography here. You can add any content here.
+AI researcher and founder focused on trustworthy AI, digital identity, synthetic media detection, human-AI interaction, and AI governance. Interested in building reliable, fair, and interpretable AI systems for high-stakes applications.
