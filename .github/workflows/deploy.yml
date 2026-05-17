@@ -23,7 +23,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.121.2
+      HUGO_VERSION: 0.128.2
     steps:
       - name: Install Hugo CLI
         run: |
@@ -55,7 +55,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: /tmp/hugo_cache
-          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.mod') }}
           restore-keys: |
             ${{ runner.os }}-hugomod-
 
@@ -65,15 +65,17 @@ jobs:
       - name: Download Hugo modules
         env:
           HUGO_CACHEDIR: /tmp/hugo_cache
-        run: |
-          hugo mod get -u ./...
-          hugo mod tidy
+          GONOSUMDB: '*'
+          GOFLAGS: '-mod=mod'
+        run: hugo mod tidy
 
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
           HUGO_CACHEDIR: /tmp/hugo_cache
+          GONOSUMDB: '*'
+          GOFLAGS: '-mod=mod'
         run: |
           hugo --gc --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
