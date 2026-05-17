@@ -10,10 +10,10 @@ highlight_name: true
 role: 'PhD Researcher · AI Founder'
 
 organizations:
-  - name: '[Institution] — PhD Program'
-    url: ''
-  - name: '[Startup Name]'
-    url: ''
+  - name: 'Your Institution — PhD Program'
+    url: 'https://your-institution.edu'
+  - name: 'Your Startup'
+    url: 'https://your-startup.com'
 
 social:
   - icon: envelope
@@ -21,19 +21,17 @@ social:
     link: '/#contact'
   - icon: twitter
     icon_pack: fab
-    link: https://twitter.com/
+    link: 'https://twitter.com/yourusername'
     label: Follow on Twitter
-    display:
-      header: true
   - icon: google-scholar
     icon_pack: ai
-    link: https://scholar.google.com/
+    link: 'https://scholar.google.com/citations?user=yourprofile'
   - icon: github
     icon_pack: fab
-    link: https://github.com/
+    link: 'https://github.com/byananya'
   - icon: linkedin
     icon_pack: fab
-    link: https://www.linkedin.com/
+    link: 'https://www.linkedin.com/in/yourprofile'
 
 interests:
   - Trustworthy AI & AI Safety
@@ -44,18 +42,18 @@ interests:
 
 education:
   - area: PhD Computer Science (in progress)
-    institution: '[University Name]'
+    institution: 'Your University Name'
     date_start: '2022-09-01'
     date_end: ''
     summary: |
       Research on trustworthy AI auditing, digital identity, and human-AI interaction.
-      Supervised by Prof. [Advisor Name].
+      Supervised by Prof. Your Advisor.
   - area: MS Computer Science
-    institution: '[University Name]'
+    institution: 'Your University Name'
     date_start: '2020-09-01'
     date_end: '2022-05-01'
   - area: BS Computer Science
-    institution: '[University Name]'
+    institution: 'Your University Name'
     date_start: '2016-09-01'
     date_end: '2020-05-01'
 
@@ -100,8 +98,8 @@ skills:
         icon_pack: fas
 ---
 
-Ananya D is a researcher and entrepreneur at the intersection of **AI systems**, **trustworthy AI**, and **digital identity**. She is currently pursuing a PhD in Computer Science at [Institution][...]
+Ananya D is a researcher and entrepreneur at the intersection of **AI systems**, **trustworthy AI**, and **digital identity**. She is currently pursuing a PhD in Computer Science at Your Institution.
 
-Alongside her academic work, she co-founded [Startup Name], building responsible AI deployment tools for enterprise. Her research has been published at venues including FAccT, CHI, CSCW, and *Nat[...]
+Alongside her academic work, she co-founded Your Startup, building responsible AI deployment tools for enterprise. Her research has been published at venues including FAccT, CHI, CSCW, and leading AI conferences.
 
-She serves as a reviewer for leading AI and HCI venues, and actively engages with policymakers, practitioners, and civil society on AI governance challenges. She is passionate about making AI saf[...]
+She serves as a reviewer for leading AI and HCI venues, and actively engages with policymakers, practitioners, and civil society on AI governance challenges. She is passionate about making AI safe, trustworthy, and beneficial for society.
