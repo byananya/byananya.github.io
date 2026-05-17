@@ -3,20 +3,14 @@ title:
 type: landing
 
 design:
-  spacing: '5rem'
+  spacing: '3rem'
 
 sections:
 
-  - block: resume-biography-3
+  - block: about.biography
     id: about
     content:
       username: admin
-      text: ''
-      button:
-        text: Download CV
-        url: uploads/cv.pdf
-    design:
-      css_class: ''
 
   - block: markdown
     id: research
@@ -66,8 +60,8 @@ sections:
           - project
         featured_only: true
     design:
-      view: card
-      columns: '3'
+      view: compact
+      columns: '1'
 
   - block: markdown
     id: teaching
