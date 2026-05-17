@@ -1,0 +1,55 @@
+title: Ananya D
+baseURL: 'https://byananya.github.io/ananyad.github.io/'
+
+defaultContentLanguage: en
+hasCJKLanguage: false
+defaultContentLanguageInSubdir: false
+removePathAccents: true
+
+enableEmoji: true
+enableRobotsTXT: true
+summaryLength: 30
+paginate: 10
+
+permalinks:
+  event: '/talk/:slug/'
+  tags: '/tag/:slug/'
+  categories: '/category/:slug/'
+  publication_types: '/publication-type/:slug/'
+
+disableAliases: true
+
+outputs:
+  home: [HTML, RSS, JSON, WebAppManifest, headers, redirects]
+  section: [HTML, RSS]
+
+imaging:
+  resampleFilter: lanczos
+  quality: 80
+  anchor: smart
+
+build:
+  writeStats: true
+
+timeout: 600000
+
+taxonomies:
+  tag: tags
+  category: categories
+  publication_type: publication_types
+  author: authors
+
+markup:
+  _merge: deep
+
+security:
+  _merge: deep
+
+sitemap:
+  _merge: deep
+
+module:
+  imports:
+    - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify
+    - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-reveal
+    - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5

@@ -1,0 +1,73 @@
+appearance:
+  theme_day: minimal
+  theme_night: minimal
+  font: minimal
+  font_size: M
+
+marketing:
+  seo:
+    site_type: Person
+    local_business_type: ''
+    org_name: ''
+    description: 'Ananya D — AI Researcher and Founder. Research on trustworthy AI, digital identity, generative media, and human-AI interaction.'
+    twitter: ''
+  analytics:
+    google_analytics: ''
+    baidu_tongji: ''
+    google_tag_manager: ''
+    microsoft_clarity: ''
+  verification:
+    google: ''
+    baidu: ''
+
+header:
+  navbar:
+    enable: true
+    align: r
+    show_logo: true
+    show_language: false
+    show_day_night: false
+    show_search: true
+    highlight_active_link: false
+
+footer:
+  copyright:
+    notice: '© {year} Ananya D. Built with [HugoBlox](https://hugoblox.com).'
+    license:
+      enable: false
+      allow_derivatives: false
+      share_alike: false
+      allow_commercial: false
+
+locale:
+  date_format: 'Jan 2006'
+  time_format: ''
+  address_format: en-us
+
+features:
+  syntax_highlighter:
+    enable: false
+  math:
+    enable: false
+  privacy_pack:
+    enable: false
+  avatar:
+    gravatar: false
+    shape: circle
+  comment:
+    provider: ''
+  search:
+    provider: wowchemy
+  map:
+    provider: ''
+
+extensions:
+  cms:
+    branch: main
+    local_backend: false
+  academicons:
+    enable: true
+
+publications:
+  date_format: January 2006
+  citation_style: apa
