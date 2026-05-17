@@ -1,5 +1,5 @@
-{{/* Minimal about block — riastevens.github.io style */}}
-{{- $block := .block -}}
+{{/* About biography block — riastevens.github.io style */}}
+{{- $block := .wcBlock -}}
 {{- $author := "" -}}
 {{- with $block.content.username -}}
   {{- $author = site.GetPage (printf "/authors/%s" .) -}}
@@ -10,6 +10,8 @@
 <div class="bio-wrap">
   {{- with $avatar -}}
   <img src="{{ .RelPermalink }}" alt="{{ $author.Title }}" class="bio-avatar">
+  {{- else -}}
+  <img src="/images/avatar-placeholder.svg" alt="{{ $author.Title }}" class="bio-avatar">
   {{- end -}}
   <div class="bio-body">
     <h1 class="bio-name">{{ .Title }}</h1>
@@ -17,7 +19,7 @@
     {{- range .Params.organizations -}}
       {{- with .name -}}
       <p class="bio-org">
-        {{- if $.url -}}<a href="{{ $.url }}">{{ . }}</a>{{- else -}}{{ . }}{{- end -}}
+        {{- if .url -}}<a href="{{ .url }}">{{ . }}</a>{{- else -}}{{ . }}{{- end -}}
       </p>
       {{- end -}}
     {{- end -}}
