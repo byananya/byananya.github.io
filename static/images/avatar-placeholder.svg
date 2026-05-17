@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="280" viewBox="0 0 280 280">
+  <circle cx="140" cy="140" r="140" fill="#e8e8e8"/>
+  <circle cx="140" cy="108" r="48" fill="#b0b0b0"/>
+  <ellipse cx="140" cy="230" rx="72" ry="52" fill="#b0b0b0"/>
+  <text x="140" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="700" fill="#fff" text-anchor="middle" dominant-baseline="middle">AD</text>
+</svg>
