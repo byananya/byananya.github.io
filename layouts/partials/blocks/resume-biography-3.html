@@ -1,0 +1,11 @@
+{{/* Resume Biography 3 Block */}}
+{{- $page := .page -}}
+{{- $block := .block -}}
+
+<div class="resume-biography-3">
+  {{- with $block.content -}}
+    <div class="content">
+      {{- . | markdownify -}}
+    </div>
+  {{- end -}}
+</div>
