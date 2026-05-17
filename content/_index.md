@@ -36,6 +36,23 @@ sections:
     design:
       columns: '1'
 
+  - block: markdown
+    id: venture
+    content:
+      title: Venture / Startup
+      text: |
+        **[STARTUP_NAME]** &nbsp;·&nbsp; [YOUR_ROLE] &nbsp;·&nbsp; [STAGE]
+
+        [STARTUP_NAME] [WHAT_IT_DOES]. The company is grounded in the same research problems I study academically — bridging trustworthy AI, digital identity, and human-AI interaction from theory to production systems.
+
+        - **Role:** [YOUR_ROLE] — [KEY_RESPONSIBILITIES]
+        - **Traction / Outcome:** [OUTCOME_OR_TRACTION]
+        - **Research connection:** Building and deploying [STARTUP_NAME] surfaced real-world failure modes in [RESEARCH_AREA] that academic benchmarks miss — directly shaping my PhD research agenda
+
+        [Website →]([WEBSITE]) &nbsp;·&nbsp; [Press →]([PRESS_LINK]) &nbsp;·&nbsp; [GitHub →]([GITHUB])
+    design:
+      columns: '1'
+
   - block: collection
     id: publications
     content:
@@ -64,18 +81,12 @@ sections:
       columns: '1'
 
   - block: markdown
-    id: teaching
+    id: talks
     content:
-      title: Teaching & Service
+      title: Talks & Media
       text: |
-        **Teaching**
-        - Teaching Assistant, [Course Name], [Institution], [Term] *(placeholder)*
-        - Guest Lecturer, [Course Name], [Institution], [Term] *(placeholder)*
-
-        **Academic Service**
-        - Reviewer: FAccT, NeurIPS, ICML, ACL *(placeholder — update with actual venues)*
-        - Program Committee: [Conference Name] *(placeholder)*
-        - Workshop Organizer: [Workshop Name @ Venue] *(placeholder)*
+        *[TALK_TITLE]*, [VENUE], [DATE] — [DESCRIPTION_OR_LINK]\
+        *[INTERVIEW_OR_PRESS_TITLE]*, [OUTLET], [DATE] — [LINK]
     design:
       columns: '1'
 
@@ -84,24 +95,24 @@ sections:
     content:
       title: Contact
       text: 'Feel free to reach out for research collaborations, speaking invitations, or general inquiries.'
-      email: ananya@example.com
+      email: '[YOUR_EMAIL]'
       contact_links:
         - icon: twitter
           icon_pack: fab
           name: Twitter / X
-          link: 'https://twitter.com/'
+          link: 'https://twitter.com/[YOUR_HANDLE]'
         - icon: google-scholar
           icon_pack: ai
           name: Google Scholar
-          link: 'https://scholar.google.com/'
+          link: 'https://scholar.google.com/citations?user=[YOUR_SCHOLAR_ID]'
         - icon: github
           icon_pack: fab
           name: GitHub
-          link: 'https://github.com/'
+          link: 'https://github.com/[YOUR_GITHUB]'
         - icon: linkedin
           icon_pack: fab
           name: LinkedIn
-          link: 'https://www.linkedin.com/'
+          link: 'https://www.linkedin.com/in/[YOUR_LINKEDIN]'
     design:
       columns: '1'
 ---

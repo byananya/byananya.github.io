@@ -18,9 +18,10 @@ organizations:
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: Researching trustworthy AI, digital identity, generative media, and human-AI interaction.
+bio: Founder and AI researcher working on trustworthy AI, digital identity, and human-AI interaction.
 
 # Social/Academic Networking
+# ⚠️  Replace each placeholder below with your real profile URL/handle
 social:
   - icon: envelope
     icon_pack: fas
@@ -30,16 +31,16 @@ social:
     link: uploads/cv.pdf
   - icon: google-scholar
     icon_pack: ai
-    link: https://scholar.google.com/
+    link: 'https://scholar.google.com/citations?user=[YOUR_SCHOLAR_ID]'
   - icon: github
     icon_pack: fab
-    link: https://github.com/
+    link: 'https://github.com/[YOUR_GITHUB]'
   - icon: linkedin
     icon_pack: fab
-    link: https://www.linkedin.com/
+    link: 'https://www.linkedin.com/in/[YOUR_LINKEDIN]'
   - icon: twitter
     icon_pack: fab
-    link: https://twitter.com/
+    link: 'https://twitter.com/[YOUR_HANDLE]'
     label: Follow on Twitter
     display:
       header: true
@@ -54,4 +55,4 @@ highlight_name: true
 user_groups: []
 ---
 
-AI researcher and founder focused on trustworthy AI, digital identity, synthetic media detection, human-AI interaction, and AI governance. Interested in building reliable, fair, and interpretable AI systems for high-stakes applications.
+I'm a founder and AI researcher working at the intersection of trustworthy AI, digital identity, and human-AI interaction — questions at the foundation of how people and institutions will navigate an AI-saturated world. I built [STARTUP_NAME] to address [WHAT_IT_DOES], grounding the product directly in these research areas and learning, hands-on, where theory meets the friction of real deployment. That experience surfaced foundational questions I can't resolve at startup speed — around the mechanisms, guarantees, and failure modes that will define trustworthy AI systems for decades. I'm pursuing a PhD to go deeper on exactly those questions.
