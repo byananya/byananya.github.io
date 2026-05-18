@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Ananya D</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --paper:   #fefaf6;
+  --cream:   #f8f2eb;
+  --blush:   #f2e5da;
+  --rose:    #e2c8bc;
+  --dusty:   #b87b6a;
+  --deep:    #8c3d2a;
+  --plum:    #271510;
+  --muted:   #7a6058;
+  --faint:   #c8b0a4;
+  --rule:    #e8d5cc;
+  --sage:    #e2ead8;
+  --sage-dk: #4e7244;
+  --amber:   #c07838;
+  --amber-lt:#f5e8d4;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--paper);color:var(--plum);line-height:1.75;overflow-x:hidden}
+
+/* ─── NAV ─── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  height:64px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 3.5rem;
+  background:rgba(254,250,246,.95);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--rule);
+}
+.n-logo{font-family:'Instrument Serif',serif;font-size:1.15rem;color:var(--plum);text-decoration:none;}
+.n-logo em{font-style:italic;color:var(--dusty);}
+.n-links{display:flex;gap:2.25rem;list-style:none;}
+.n-links a{font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}
+.n-links a:hover{color:var(--deep);}
+.n-contact{
+  font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+  padding:0.48rem 1.2rem;border-radius:50px;
+  background:var(--plum);color:var(--paper);
+  text-decoration:none;transition:background .2s;
+}
+.n-contact:hover{background:var(--deep);}
+
+/* ─── HERO ─── */
+.hero{
+  min-height:100vh;padding-top:64px;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;
+}
+/* warm ambient blobs */
+.blob{position:absolute;border-radius:50%;pointer-events:none;}
+.blob-1{width:600px;height:600px;top:-160px;right:-120px;background:radial-gradient(circle,rgba(226,200,188,.35) 0%,transparent 70%);}
+.blob-2{width:420px;height:420px;bottom:-100px;left:5%;background:radial-gradient(circle,rgba(226,234,216,.45) 0%,transparent 70%);}
+.blob-3{width:260px;height:260px;top:35%;left:38%;background:radial-gradient(circle,rgba(242,229,218,.3) 0%,transparent 70%);}
+
+.hero-inner{
+  position:relative;z-index:1;
+  padding:5rem 3.5rem 3rem;
+  display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:center;
+  max-width:1200px;
+}
+
+/* left */
+.h-eyebrow{
+  display:flex;align-items:center;gap:0.6rem;
+  font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--dusty);margin-bottom:2rem;
+}
+.h-eyebrow::before{content:'';width:1.75rem;height:1px;background:var(--dusty);}
+
+.h-headline{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(2.8rem,5vw,4.8rem);
+  line-height:1.08;letter-spacing:-0.01em;
+  color:var(--plum);margin-bottom:1.75rem;
+}
+.h-headline em{font-style:italic;color:var(--dusty);}
+
+.h-mission{
+  font-size:1.05rem;font-weight:300;color:var(--muted);
+  max-width:30rem;line-height:1.85;margin-bottom:2.5rem;
+}
+.h-mission strong{color:var(--plum);font-weight:500;}
+
+/* dual-audience badges */
+.h-badges{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:2.5rem;}
+.badge{
+  display:flex;align-items:center;gap:0.5rem;
+  font-size:0.68rem;font-weight:600;letter-spacing:0.07em;
+  padding:0.4rem 1rem;border-radius:50px;
+}
+.badge-founder{background:rgba(140,61,42,.1);color:var(--deep);}
+.badge-phd{background:rgba(78,114,68,.1);color:var(--sage-dk);}
+.badge-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.badge-founder .badge-dot{background:var(--deep);animation:pulse 2s infinite;}
+.badge-phd .badge-dot{background:var(--sage-dk);}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
+
+.h-ctas{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;}
+.cta-a{background:var(--deep);color:#fff;padding:.8rem 1.9rem;border-radius:50px;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .2s;box-shadow:0 4px 18px rgba(140,61,42,.2);}
+.cta-a:hover{background:var(--plum);transform:translateY(-1px);}
+.cta-b{background:var(--sage);color:var(--sage-dk);padding:.8rem 1.9rem;border-radius:50px;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1.5px solid rgba(78,114,68,.25);transition:all .2s;}
+.cta-b:hover{background:#d4e4cc;}
+.cta-c{font-size:.75rem;font-weight:500;color:var(--muted);text-decoration:none;border-bottom:1px dashed var(--rule);padding-bottom:1px;transition:all .2s;}
+.cta-c:hover{color:var(--plum);border-color:var(--plum);}
+
+/* right card */
+.h-card{
+  background:#fff;border:1px solid var(--rule);border-radius:20px;
+  padding:2.25rem;
+  display:flex;flex-direction:column;gap:1.75rem;
+  box-shadow:0 8px 40px rgba(39,21,16,.06);
+}
+.hc-section-label{
+  font-size:0.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--faint);margin-bottom:.6rem;
+}
+.hc-stat-row{display:flex;gap:.5rem;flex-wrap:wrap;}
+.hc-stat{
+  font-size:.75rem;font-weight:500;
+  padding:.3rem .8rem;border-radius:50px;
+  background:var(--blush);color:var(--deep);
+}
+.hc-pub-list{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+.hc-pub-list li{
+  font-size:.8rem;font-weight:300;color:var(--muted);
+  display:flex;gap:.6rem;align-items:flex-start;
+  padding-bottom:.6rem;border-bottom:1px solid var(--rule);
+}
+.hc-pub-list li:last-child{border-bottom:none;padding-bottom:0;}
+.hc-pub-dot{width:6px;height:6px;border-radius:50%;background:var(--rose);flex-shrink:0;margin-top:.45rem;}
+.hc-venue{font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--dusty);display:block;margin-bottom:.15rem;}
+.hc-q-box{
+  background:var(--cream);border-radius:12px;padding:1rem 1.25rem;
+  font-size:.82rem;font-weight:300;color:var(--muted);line-height:1.65;
+  font-style:italic;border-left:2px solid var(--rose);
+}
+
+/* ─── TICKER BAR ─── */
+.ticker{
+  background:var(--plum);color:rgba(255,255,255,.5);
+  padding:.65rem 0;overflow:hidden;white-space:nowrap;
+}
+.ticker-inner{
+  display:inline-flex;gap:3rem;
+  animation:scroll 30s linear infinite;
+}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker-item{font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:.75rem;}
+.ticker-item span{color:var(--dusty);}
+
+/* ─── SHARED SECTION ─── */
+.section{padding:7rem 3.5rem;}
+.section.alt{background:var(--cream);}
+.section.blush{background:var(--blush);}
+.section.sage{background:var(--sage);}
+.section.dark{background:var(--plum);}
+
+.s-top{margin-bottom:4rem;}
+.s-eyebrow{
+  display:flex;align-items:center;gap:.75rem;
+  font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  margin-bottom:1rem;
+}
+.s-eyebrow.founder{color:var(--deep);}
+.s-eyebrow.phd{color:var(--sage-dk);}
+.s-eyebrow.neutral{color:var(--dusty);}
+.s-eyebrow.light{color:rgba(255,255,255,.4);}
+.s-eyebrow::before{content:'';width:1.5rem;height:1px;background:currentColor;}
+.s-label{display:inline-flex;align-items:center;gap:.4rem;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .7rem;border-radius:50px;}
+.sl-founder{background:rgba(140,61,42,.1);color:var(--deep);}
+.sl-phd{background:rgba(78,114,68,.1);color:var(--sage-dk);}
+
+.s-title{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(2rem,3.5vw,3rem);
+  line-height:1.1;color:var(--plum);
+}
+.s-title em{font-style:italic;color:var(--dusty);}
+.s-title.light{color:rgba(254,250,246,.92);}
+.s-title.light em{color:rgba(226,200,188,.8);}
+.s-sub{
+  font-size:.92rem;font-weight:300;color:var(--muted);
+  max-width:36rem;line-height:1.85;margin-top:.85rem;
+}
+.s-sub.light{color:rgba(255,255,255,.42);}
+
+/* ─── PROBLEM SECTION ─── */
+.problem-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3.5rem;
+}
+.prob-card{
+  background:#fff;border:1px solid var(--rule);border-radius:16px;
+  padding:2rem;transition:all .25s;
+}
+.prob-card:hover{border-color:var(--rose);box-shadow:0 6px 24px rgba(39,21,16,.07);}
+.prob-card-label{
+  font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--dusty);margin-bottom:.9rem;
+  display:flex;align-items:center;gap:.5rem;
+}
+.prob-card-label::before{content:'';width:1rem;height:1px;background:currentColor;}
+.prob-card-stat{
+  font-family:'Instrument Serif',serif;
+  font-size:2rem;color:var(--plum);line-height:1;margin-bottom:.5rem;
+}
+.prob-card-text{font-size:.85rem;font-weight:300;color:var(--muted);line-height:1.75;}
+
+.problem-statement{
+  margin-top:3rem;
+  background:var(--blush);border-radius:16px;
+  padding:2.5rem 3rem;
+  border-left:3px solid var(--dusty);
+}
+.ps-text{
+  font-family:'Instrument Serif',serif;
+  font-size:1.5rem;font-style:italic;
+  color:var(--plum);line-height:1.55;
+}
+.ps-sub{font-size:.85rem;font-weight:300;color:var(--muted);margin-top:1rem;line-height:1.75;}
+
+/* ─── BUILDING SECTION ─── */
+.build-layout{display:grid;grid-template-columns:2fr 1fr;gap:4rem;align-items:start;}
+.build-main{}
+.build-intro{font-size:.95rem;font-weight:300;color:var(--muted);line-height:1.88;margin-bottom:2.5rem;max-width:32rem;}
+.build-intro strong{color:var(--plum);font-weight:500;}
+
+.product-card{
+  background:#fff;border:1px solid var(--rule);border-radius:18px;
+  padding:2rem;margin-bottom:1.25rem;
+  display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:start;
+  transition:all .25s;
+}
+.product-card:hover{border-color:var(--dusty);box-shadow:0 6px 24px rgba(39,21,16,.07);}
+.pc-icon{
+  width:44px;height:44px;border-radius:12px;
+  background:var(--blush);border:1px solid var(--rose);
+  display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;
+}
+.pc-status{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:.5rem;
+}
+.pc-status.live{color:var(--sage-dk);}
+.pc-status.live::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--sage-dk);animation:pulse 2s infinite;}
+.pc-status.build{color:var(--amber);}
+.pc-status.build::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--amber);}
+.pc-name{font-family:'Instrument Serif',serif;font-size:1.15rem;color:var(--plum);margin-bottom:.4rem;}
+.pc-desc{font-size:.82rem;font-weight:300;color:var(--muted);line-height:1.7;}
+.pc-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.75rem;}
+.pc-tag{font-size:.58rem;font-weight:700;letter-spacing:.07em;padding:.18rem .55rem;border-radius:50px;background:var(--amber-lt);color:var(--amber);}
+
+.build-aside{}
+.traction-card{
+  background:var(--deep);border-radius:18px;padding:2rem;color:#fff;
+  position:sticky;top:84px;
+}
+.tc-label{font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1.5rem;}
+.tc-stats{display:flex;flex-direction:column;gap:1.25rem;}
+.tc-stat-val{font-family:'Instrument Serif',serif;font-size:2.25rem;line-height:1;color:#fff;margin-bottom:.25rem;}
+.tc-stat-lbl{font-size:.68rem;font-weight:300;color:rgba(255,255,255,.45);}
+.tc-divider{height:1px;background:rgba(255,255,255,.1);}
+.tc-ask{
+  margin-top:1.5rem;background:rgba(255,255,255,.07);border-radius:10px;
+  padding:1rem;font-size:.8rem;font-weight:300;color:rgba(255,255,255,.65);line-height:1.65;
+}
+.tc-ask strong{color:#fff;font-weight:500;}
+
+/* ─── RESEARCH SECTION ─── */
+.research-layout{display:grid;grid-template-columns:1fr 1.8fr;gap:5rem;align-items:start;}
+.research-aside{position:sticky;top:84px;}
+.ra-statement{
+  font-family:'Instrument Serif',serif;
+  font-size:1.15rem;font-style:italic;
+  color:var(--plum);line-height:1.6;margin-bottom:1.5rem;
+  border-left:2px solid var(--rose);padding-left:1.25rem;
+}
+.ra-body{font-size:.88rem;font-weight:300;color:var(--muted);line-height:1.85;margin-bottom:1.5rem;}
+.ra-link{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sage-dk);text-decoration:none;border-bottom:1.5px solid rgba(78,114,68,.3);padding-bottom:1px;transition:all .2s;}
+.ra-link:hover{border-color:var(--sage-dk);}
+
+.r-cards{display:flex;flex-direction:column;gap:.75rem;}
+.r-card{
+  background:#fff;border:1px solid var(--rule);border-radius:14px;
+  padding:1.6rem 1.75rem;
+  display:grid;grid-template-columns:2.25rem 1fr;gap:1.1rem;align-items:start;
+  transition:all .22s;
+}
+.r-card:hover{border-color:var(--dusty);transform:translateX(4px);}
+.r-n{
+  width:2.25rem;height:2.25rem;border-radius:50%;
+  background:var(--blush);border:1px solid var(--rose);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.68rem;font-weight:600;color:var(--dusty);flex-shrink:0;
+}
+.r-title{font-family:'Instrument Serif',serif;font-size:1rem;color:var(--plum);margin-bottom:.35rem;}
+.r-text{font-size:.8rem;font-weight:300;color:var(--muted);line-height:1.72;}
+
+/* ─── PUBLICATIONS ─── */
+.pub-list{display:flex;flex-direction:column;}
+.pub-row{
+  display:grid;grid-template-columns:5rem 1fr auto;
+  gap:2rem;padding:2rem 0;
+  border-bottom:1px solid var(--rule);align-items:start;
+  transition:padding-left .2s;
+}
+.pub-row:hover{padding-left:.5rem;}
+.pub-row:first-child{border-top:1px solid var(--rule);}
+.pub-yr{font-family:'Instrument Serif',serif;font-style:italic;font-size:.92rem;color:var(--dusty);padding-top:.2rem;}
+.pub-pill{display:inline-block;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .6rem;border-radius:50px;margin-bottom:.5rem;}
+.pp-chi{background:rgba(140,61,42,.1);color:var(--deep);}
+.pp-facct{background:rgba(140,61,42,.1);color:var(--deep);}
+.pp-nat{background:rgba(78,114,68,.1);color:var(--sage-dk);}
+.pub-title{font-family:'Instrument Serif',serif;font-size:1rem;color:var(--plum);line-height:1.35;margin-bottom:.4rem;}
+.pub-desc{font-size:.78rem;font-weight:300;color:var(--muted);line-height:1.7;}
+.pub-links{display:flex;flex-direction:column;gap:.35rem;align-items:flex-end;}
+.pub-lnk{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .6rem;border-radius:50px;border:1px solid var(--rule);color:var(--deep);text-decoration:none;white-space:nowrap;transition:all .15s;}
+.pub-lnk:hover{background:var(--deep);color:#fff;border-color:var(--deep);}
+
+/* ─── OPEN QUESTIONS ─── */
+.q-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
+.q-card{
+  border:1px solid rgba(255,255,255,.1);border-radius:16px;
+  padding:2rem;transition:background .2s;
+}
+.q-card:hover{background:rgba(255,255,255,.04);}
+.q-num{font-family:'Instrument Serif',serif;font-style:italic;font-size:1.6rem;color:rgba(255,255,255,.15);margin-bottom:.75rem;line-height:1;}
+.q-text{font-family:'Instrument Serif',serif;font-style:italic;font-size:1rem;color:rgba(254,250,246,.88);line-height:1.55;margin-bottom:.75rem;}
+.q-why{font-size:.78rem;font-weight:300;color:rgba(255,255,255,.4);line-height:1.7;}
+.q-tag{display:inline-block;margin-top:.85rem;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .55rem;border-radius:50px;background:rgba(226,200,188,.1);color:rgba(226,200,188,.6);}
+
+.section-bridge{
+  margin-top:4rem;padding:2rem 2.5rem;
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;
+}
+.bridge-text{font-size:.9rem;font-weight:300;color:rgba(255,255,255,.5);line-height:1.7;max-width:34rem;}
+.bridge-text strong{color:rgba(255,255,255,.8);font-weight:500;}
+.bridge-label{
+  font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  padding:.5rem 1.2rem;border-radius:50px;border:1px solid rgba(255,255,255,.15);
+  color:rgba(255,255,255,.4);white-space:nowrap;
+}
+
+/* ─── STORY ─── */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.story-left{}
+.story-body{font-size:.95rem;font-weight:300;color:var(--muted);line-height:1.9;margin-bottom:1.5rem;}
+.story-body strong{color:var(--plum);font-weight:500;}
+.story-body em{font-style:italic;color:var(--dusty);}
+
+.story-right{}
+.timeline{display:flex;flex-direction:column;gap:0;}
+.tl-item{
+  display:grid;grid-template-columns:1.5rem 1fr;gap:1.25rem;
+  padding-bottom:2rem;position:relative;
+}
+.tl-item:last-child{padding-bottom:0;}
+.tl-item::before{
+  content:'';position:absolute;left:.7rem;top:1.5rem;bottom:0;width:1px;
+  background:var(--rule);
+}
+.tl-item:last-child::before{display:none;}
+.tl-dot{
+  width:1.5rem;height:1.5rem;border-radius:50%;flex-shrink:0;
+  background:#fff;border:2px solid var(--rose);
+  display:flex;align-items:center;justify-content:center;margin-top:.1rem;
+}
+.tl-dot.active{background:var(--deep);border-color:var(--deep);}
+.tl-dot-inner{width:6px;height:6px;border-radius:50%;background:var(--rose);}
+.tl-dot.active .tl-dot-inner{background:#fff;}
+.tl-year{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--dusty);margin-bottom:.3rem;}
+.tl-event{font-size:.88rem;font-weight:500;color:var(--plum);margin-bottom:.25rem;line-height:1.35;}
+.tl-detail{font-size:.78rem;font-weight:300;color:var(--muted);line-height:1.65;}
+.tl-badge{display:inline-flex;align-items:center;gap:.35rem;margin-top:.5rem;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .55rem;border-radius:50px;}
+.tb-now{background:rgba(140,61,42,.1);color:var(--deep);}
+.tb-next{background:rgba(78,114,68,.1);color:var(--sage-dk);}
+
+/* ─── CONTACT ─── */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.contact-left{}
+.contact-eyebrow{font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.25rem;display:flex;align-items:center;gap:.6rem;}
+.contact-eyebrow::before{content:'';width:1.25rem;height:1px;background:rgba(255,255,255,.3);}
+.contact-heading{font-family:'Instrument Serif',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-style:italic;color:rgba(254,250,246,.9);line-height:1.3;margin-bottom:1.25rem;}
+.contact-body{font-size:.88rem;font-weight:300;color:rgba(255,255,255,.38);line-height:1.85;margin-bottom:2rem;}
+
+.who-cards{display:flex;flex-direction:column;gap:.65rem;}
+.who-card{
+  padding:1.1rem 1.4rem;background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.07);border-radius:12px;
+}
+.wc-label{font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.4rem;}
+.wc-label.founder{color:rgba(226,200,188,.7);}
+.wc-label.phd{color:rgba(198,221,192,.7);}
+.wc-text{font-size:.82rem;font-weight:300;color:rgba(255,255,255,.4);line-height:1.6;}
+
+.contact-right{}
+.ch-list{display:flex;flex-direction:column;gap:.6rem;}
+.ch-row{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem 1.4rem;border:1px solid rgba(255,255,255,.08);border-radius:12px;
+  text-decoration:none;color:rgba(254,250,246,.85);transition:all .2s;
+}
+.ch-row:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.04);}
+.ch-left{display:flex;flex-direction:column;gap:.12rem;}
+.ch-name{font-size:.88rem;font-weight:500;}
+.ch-hint{font-size:.7rem;font-weight:300;color:rgba(255,255,255,.28);}
+.ch-arr{color:rgba(255,255,255,.2);transition:all .2s;}
+.ch-row:hover .ch-arr{color:rgba(255,255,255,.65);transform:translateX(3px);}
+
+/* ─── FOOTER ─── */
+footer{
+  background:#1c0d08;padding:1.6rem 3.5rem;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(255,255,255,.05);
+}
+footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
+
+/* ─── ANIMATIONS ─── */
+.fade-up{opacity:0;transform:translateY(16px);animation:fu .72s ease forwards;}
+@keyframes fu{to{opacity:1;transform:translateY(0)}}
+.d1{animation-delay:.1s}.d2{animation-delay:.22s}.d3{animation-delay:.36s}.d4{animation-delay:.5s}.d5{animation-delay:.64s}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease;}
+.reveal.on{opacity:1;transform:translateY(0);}
+
+/* ─── EXPERIENCE ─── */
+.exp-layout{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--rule);}
+.exp-col{background:var(--paper);padding:2.5rem;}
+.exp-col-label{
+  font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  padding:.28rem .8rem;border-radius:50px;display:inline-flex;align-items:center;gap:.4rem;
+  margin-bottom:2rem;
+}
+.exp-col-label.research{background:rgba(78,114,68,.1);color:var(--sage-dk);}
+.exp-col-label.industry{background:rgba(140,61,42,.1);color:var(--deep);}
+.exp-col-label::before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor;}
+
+.exp-item{
+  padding:1.5rem 0;border-bottom:1px solid var(--rule);
+  display:grid;grid-template-columns:auto 1fr;gap:1.1rem;align-items:start;
+}
+.exp-item:last-child{border-bottom:none;padding-bottom:0;}
+.exp-logo{
+  width:38px;height:38px;border-radius:10px;
+  background:var(--blush);border:1px solid var(--rose);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;flex-shrink:0;
+}
+.exp-role{font-size:.9rem;font-weight:600;color:var(--plum);line-height:1.3;margin-bottom:.2rem;}
+.exp-org{font-size:.8rem;font-weight:500;color:var(--dusty);margin-bottom:.2rem;}
+.exp-meta{font-size:.7rem;font-weight:300;color:var(--muted);margin-bottom:.6rem;display:flex;gap:.5rem;flex-wrap:wrap;}
+.exp-meta-dot{color:var(--rule);}
+.exp-desc{font-size:.8rem;font-weight:300;color:var(--muted);line-height:1.72;}
+.exp-why{
+  margin-top:.6rem;font-size:.75rem;font-style:italic;
+  color:var(--deep);border-left:2px solid var(--rose);padding-left:.75rem;line-height:1.6;
+}
+.exp-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.65rem;}
+.exp-tag{font-size:.58rem;font-weight:700;letter-spacing:.07em;padding:.18rem .5rem;border-radius:50px;}
+.exp-tag.r{background:rgba(78,114,68,.1);color:var(--sage-dk);}
+.exp-tag.f{background:rgba(140,61,42,.1);color:var(--deep);}
+.exp-tag.n{background:var(--blush);color:var(--dusty);}
+
+/* ─── VOLUNTEER ─── */
+.vol-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;}
+.vol-card{
+  background:#fff;border:1px solid var(--rule);border-radius:14px;
+  padding:1.75rem;transition:all .22s;
+}
+.vol-card:hover{border-color:var(--dusty);box-shadow:0 4px 20px rgba(39,21,16,.07);}
+.vol-icon{font-size:1.4rem;margin-bottom:.85rem;}
+.vol-org{font-family:'Instrument Serif',serif;font-size:1rem;color:var(--plum);margin-bottom:.2rem;}
+.vol-role{font-size:.75rem;font-weight:600;color:var(--dusty);margin-bottom:.55rem;}
+.vol-desc{font-size:.8rem;font-weight:300;color:var(--muted);line-height:1.72;}
+.vol-period{font-size:.65rem;font-weight:300;color:var(--faint);margin-top:.65rem;}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:960px){
+  nav{padding:0 1.5rem;}
+  .n-links{display:none;}
+  .hero-inner,.problem-grid,.build-layout,.research-layout,.story-grid,.contact-grid,.q-grid,.exp-layout{grid-template-columns:1fr;}
+  .build-aside,.research-aside{position:static;}
+  .section{padding:5rem 1.75rem;}
+  .pub-row{grid-template-columns:1fr;}
+  .pub-yr{display:none;}
+  .pub-links{flex-direction:row;align-items:flex-start;}
+  .ticker{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="n-logo" href="#">Ananya <em>D.</em></a>
+  <ul class="n-links">
+    <li><a href="#building">Building</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#questions">Open Questions</a></li>
+    <li><a href="#story">Story</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Let's Talk</a></li>
+  </ul>
+  <a class="n-contact" href="#contact">Get in Touch</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="about">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <div class="hero-inner">
+    <!-- LEFT -->
+    <div>
+      <div class="h-eyebrow fade-up">AI Researcher · Founder · Builder</div>
+
+      <h1 class="h-headline fade-up d1">
+        I study how AI<br/>breaks trust —<br/>then <em>fix it.</em>
+      </h1>
+
+      <p class="h-mission fade-up d2">
+        I'm <strong>Ananya D.</strong> — an AI researcher and founder working on
+        <strong>trustworthy AI, digital identity, and accountability systems.</strong>
+        Right now I'm building a company around these questions.
+        In Fall 2027, I plan to go deeper with a PhD.
+        Both feel like the same obsession wearing different shoes.
+      </p>
+
+      <div class="h-badges fade-up d3">
+        <span class="badge badge-founder">
+          <span class="badge-dot"></span>
+          Applying to Accelerators · Now
+        </span>
+        <span class="badge badge-phd">
+          <span class="badge-dot"></span>
+          PhD Applicant · Fall 2027
+        </span>
+      </div>
+
+      <div class="h-ctas fade-up d4">
+        <a class="cta-a" href="#building">See What I'm Building →</a>
+        <a class="cta-b" href="#research">My Research →</a>
+        <a class="cta-c" href="#">Download CV</a>
+      </div>
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div class="h-card fade-up d3">
+      <div>
+        <div class="hc-section-label">At a glance</div>
+        <div class="hc-stat-row">
+          <span class="hc-stat">3 publications</span>
+          <span class="hc-stat">CHI · FAccT · Nature MI</span>
+          <span class="hc-stat">2 open-source toolkits</span>
+          <span class="hc-stat">3 active projects</span>
+        </div>
+      </div>
+      <div>
+        <div class="hc-section-label">Recent work</div>
+        <ul class="hc-pub-list">
+          <li>
+            <div class="hc-pub-dot"></div>
+            <div>
+              <span class="hc-venue">CHI 2024</span>
+              Generative AI and the Crisis of Digital Identity
+            </div>
+          </li>
+          <li>
+            <div class="hc-pub-dot"></div>
+            <div>
+              <span class="hc-venue">FAccT 2024</span>
+              A Framework for Auditing Large Language Models
+            </div>
+          </li>
+          <li>
+            <div class="hc-pub-dot"></div>
+            <div>
+              <span class="hc-venue">Nature MI · 2023</span>
+              Misinformation Cascades in Generative Media Ecosystems
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="hc-section-label">The question driving everything</div>
+        <div class="hc-q-box">
+          "When AI systems fail in the wild, why does it almost never look like how we imagined it would in the lab?"
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item">Trustworthy AI <span>✦</span></span>
+    <span class="ticker-item">Digital Identity <span>✦</span></span>
+    <span class="ticker-item">Human-AI Collaboration <span>✦</span></span>
+    <span class="ticker-item">AI Governance <span>✦</span></span>
+    <span class="ticker-item">Synthetic Media <span>✦</span></span>
+    <span class="ticker-item">LLM Evaluation <span>✦</span></span>
+    <span class="ticker-item">Accelerator Applicant <span>✦</span></span>
+    <span class="ticker-item">PhD Applicant · Fall 2027 <span>✦</span></span>
+    <span class="ticker-item">Trustworthy AI <span>✦</span></span>
+    <span class="ticker-item">Digital Identity <span>✦</span></span>
+    <span class="ticker-item">Human-AI Collaboration <span>✦</span></span>
+    <span class="ticker-item">AI Governance <span>✦</span></span>
+    <span class="ticker-item">Synthetic Media <span>✦</span></span>
+    <span class="ticker-item">LLM Evaluation <span>✦</span></span>
+    <span class="ticker-item">Accelerator Applicant <span>✦</span></span>
+    <span class="ticker-item">PhD Applicant · Fall 2027 <span>✦</span></span>
+  </div>
+</div>
+
+<!-- THE PROBLEM -->
+<section class="section alt">
+  <div class="s-top reveal">
+    <div class="s-eyebrow founder"><span class="s-label sl-founder">The Problem</span></div>
+    <h2 class="s-title">AI systems that pass every test<br/><em>still fail in the real world.</em></h2>
+    <p class="s-sub">This is the gap I've built my research and my company around. It's not a niche academic puzzle — it's the core trust crisis of our moment.</p>
+  </div>
+  <div class="problem-grid">
+    <div class="prob-card reveal">
+      <div class="prob-card-label">The gap</div>
+      <div class="prob-card-stat">Lab → Deployment</div>
+      <div class="prob-card-text">Benchmark performance and real-world reliability are alarmingly uncorrelated. Most AI audits test for what's easy to measure, not what actually breaks under pressure.</div>
+    </div>
+    <div class="prob-card reveal">
+      <div class="prob-card-label">The identity layer</div>
+      <div class="prob-card-stat">Synthetic ≠ Fake</div>
+      <div class="prob-card-text">Generative AI has made identity verification — the bedrock of trust in digital systems — fundamentally unreliable. Current detection tools address symptoms, not the system.</div>
+    </div>
+    <div class="prob-card reveal">
+      <div class="prob-card-label">The governance failure</div>
+      <div class="prob-card-stat">Policies ≠ Practice</div>
+      <div class="prob-card-text">In regulated industries, the distance between what AI governance policies say and how AI is actually deployed is wide — and growing. Accountability exists mostly on paper.</div>
+    </div>
+    <div class="prob-card reveal">
+      <div class="prob-card-label">Why I'm the right person</div>
+      <div class="prob-card-stat">Research + Build</div>
+      <div class="prob-card-text">I've published on these failures and I'm deploying systems into them. That combination — rigorous diagnosis plus hands-on building — is rare, and it's my unfair advantage.</div>
+    </div>
+  </div>
+  <div class="problem-statement reveal">
+    <div class="ps-text">"I didn't stumble into this problem. I've spent years mapping exactly where and how AI systems break trust — and now I'm building the infrastructure to fix it."</div>
+    <div class="ps-sub">This is the through-line between my company and my eventual PhD. The research gives the company depth. The company gives the research ground truth. Both are stronger for it.</div>
+  </div>
+</section>
+
+<!-- BUILDING -->
+<section class="section" id="building">
+  <div class="s-top reveal">
+    <div class="s-eyebrow founder"><span class="s-label sl-founder">Founder</span></div>
+    <h2 class="s-title">What I'm <em>building</em></h2>
+    <p class="s-sub">Three projects, one thesis: AI systems need better accountability infrastructure — and it has to be built by someone who understands both the research and the deployment reality.</p>
+  </div>
+  <div class="build-layout">
+    <div class="build-main">
+      <div class="product-card reveal">
+        <div class="pc-icon">🔍</div>
+        <div>
+          <div class="pc-status live">Live · Open Source</div>
+          <div class="pc-name">TrustAI Audit Toolkit</div>
+          <div class="pc-desc">An open framework for systematic LLM auditing across robustness, fairness, calibration, and alignment. Built directly from my FAccT 2024 research. Currently used by research groups and early enterprise teams who want real evaluation evidence, not just vibes.</div>
+          <div class="pc-tags"><span class="pc-tag">Python SDK</span><span class="pc-tag">Open Source</span><span class="pc-tag">LLM Eval</span></div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="pc-icon">🪪</div>
+        <div>
+          <div class="pc-status build">In Development</div>
+          <div class="pc-name">SynthID Verify</div>
+          <div class="pc-desc">A platform for detecting synthetic personas — faces, voices, text — at scale. Grounded in my CHI 2024 research on how generative AI breaks identity verification pipelines. Building toward an API that sits inside existing identity workflows, not outside them.</div>
+          <div class="pc-tags"><span class="pc-tag">Detection API</span><span class="pc-tag">Provenance</span><span class="pc-tag">B2B</span></div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="pc-icon">⚖️</div>
+        <div>
+          <div class="pc-status build">Research → Product</div>
+          <div class="pc-name">AI Governance Lab</div>
+          <div class="pc-desc">Practitioner network and advisory practice helping regulated-industry operators close the gap between their AI governance policies and actual deployment. Healthcare, finance, legal. Where the stakes make sloppy accountability genuinely dangerous.</div>
+          <div class="pc-tags"><span class="pc-tag">Advisory</span><span class="pc-tag">Policy</span><span class="pc-tag">Enterprise</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="build-aside reveal">
+      <div class="traction-card">
+        <div class="tc-label">Traction &amp; Ask</div>
+        <div class="tc-stats">
+          <div>
+            <div class="tc-stat-val">[X]</div>
+            <div class="tc-stat-lbl">GitHub stars on TrustAI Toolkit</div>
+          </div>
+          <div class="tc-divider"></div>
+          <div>
+            <div class="tc-stat-val">[X]</div>
+            <div class="tc-stat-lbl">Research groups using the framework</div>
+          </div>
+          <div class="tc-divider"></div>
+          <div>
+            <div class="tc-stat-val">[X]</div>
+            <div class="tc-stat-lbl">Enterprise pilots in progress</div>
+          </div>
+          <div class="tc-divider"></div>
+          <div>
+            <div class="tc-stat-val">3</div>
+            <div class="tc-stat-lbl">Peer-reviewed publications backing the thesis</div>
+          </div>
+        </div>
+        <div class="tc-ask">
+          <strong>Currently raising:</strong> [Pre-seed / Seed] to accelerate deployment of the TrustAI Toolkit and SynthID Verify API. Looking for partners who understand that the best companies in deep tech are built on research.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="section blush" id="research">
+  <div class="s-top reveal">
+    <div class="s-eyebrow phd"><span class="s-label sl-phd">Researcher · PhD Applicant Fall 2027</span></div>
+    <h2 class="s-title">The research behind<br/><em>everything I build</em></h2>
+    <p class="s-sub">My company isn't separate from my research — it's the applied layer. The publications give the company intellectual depth. The deployment gives the research empirical truth.</p>
+  </div>
+  <div class="research-layout">
+    <div class="research-aside reveal">
+      <div class="ra-statement">"I build in order to study. The field is my lab. The deployment is my data."</div>
+      <p class="ra-body">In Fall 2027 I plan to pursue a PhD to go deeper on the questions my company surfaces but can't fully answer — especially around evaluation methodology and the social dimensions of AI-mediated trust.</p>
+      <a class="ra-link" href="#questions">See my open questions →</a>
+    </div>
+    <div class="r-cards">
+      <div class="r-card reveal"><div class="r-n">i</div><div><div class="r-title">Trustworthy AI &amp; Evaluation</div><div class="r-text">Auditing frameworks for LLM reliability, fairness, and robustness — with a focus on why lab evaluations fail to predict deployment behaviour.</div></div></div>
+      <div class="r-card reveal"><div class="r-n">ii</div><div><div class="r-title">Digital Identity &amp; Synthetic Media</div><div class="r-text">How generative AI dismantles identity verification, and what detection and provenance systems can — and cannot — restore at the technical and social layers.</div></div></div>
+      <div class="r-card reveal"><div class="r-n">iii</div><div><div class="r-title">Human-AI Interaction &amp; Decision-Making</div><div class="r-text">Empirical studies of human-AI collaboration in high-stakes decisions — and what interaction designs create genuine oversight rather than the appearance of it.</div></div></div>
+      <div class="r-card reveal"><div class="r-n">iv</div><div><div class="r-title">AI Governance in Regulated Industries</div><div class="r-text">The gap between stated AI governance policy and observable deployment behaviour in healthcare, finance, and law — and what closes it.</div></div></div>
+      <div class="r-card reveal"><div class="r-n">v</div><div><div class="r-title">Misinformation &amp; Information Ecosystems</div><div class="r-text">How AI-generated content travels through platforms, what propagation patterns look like at scale, and what erodes shared epistemic ground.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section class="section">
+  <div class="s-top reveal">
+    <div class="s-eyebrow neutral"><span class="s-label sl-phd">Publications</span></div>
+    <h2 class="s-title"><em>Selected</em> publications</h2>
+  </div>
+  <div class="pub-list">
+    <div class="pub-row reveal">
+      <div class="pub-yr">2024</div>
+      <div>
+        <span class="pub-pill pp-chi">CHI 2024</span>
+        <div class="pub-title">Generative AI and the Crisis of Digital Identity: Challenges and Mitigations</div>
+        <div class="pub-desc">How generative models systematically undermine identity verification pipelines — and a layered framework of detection, provenance, and policy responses grounded in empirical failure analysis.</div>
+      </div>
+      <div class="pub-links"><a class="pub-lnk" href="#">DOI</a><a class="pub-lnk" href="#">PDF</a><a class="pub-lnk" href="#">arXiv</a></div>
+    </div>
+    <div class="pub-row reveal">
+      <div class="pub-yr">2024</div>
+      <div>
+        <span class="pub-pill pp-facct">FAccT 2024</span>
+        <div class="pub-title">A Framework for Auditing Large Language Models: Dimensions of Trustworthiness</div>
+        <div class="pub-desc">A systematic audit framework spanning robustness, fairness, calibration, and alignment — validated across six real-world deployment contexts. The foundation of the TrustAI Toolkit.</div>
+      </div>
+      <div class="pub-links"><a class="pub-lnk" href="#">DOI</a><a class="pub-lnk" href="#">PDF</a><a class="pub-lnk" href="#">Code</a></div>
+    </div>
+    <div class="pub-row reveal">
+      <div class="pub-yr">2023</div>
+      <div>
+        <span class="pub-pill pp-nat">Nature Machine Intelligence</span>
+        <div class="pub-title">Misinformation Cascades in Generative Media Ecosystems</div>
+        <div class="pub-desc">Longitudinal study of how AI-generated content propagates through platforms, amplifying misinformation and reshaping what populations believe about contested events.</div>
+      </div>
+      <div class="pub-links"><a class="pub-lnk" href="#">DOI</a><a class="pub-lnk" href="#">PDF</a><a class="pub-lnk" href="#">arXiv</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- OPEN QUESTIONS -->
+<section class="section dark" id="questions">
+  <div class="s-top reveal">
+    <div class="s-eyebrow light"><span style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);">Open Questions · PhD Research Direction</span></div>
+    <h2 class="s-title light">What I still<br/><em>don't know</em></h2>
+    <p class="s-sub light">These are the questions my company surfaces that research alone can answer. They're also the core of my PhD research statement.</p>
+  </div>
+  <div class="q-grid">
+    <div class="q-card reveal">
+      <div class="q-num">01</div>
+      <div class="q-text">Why do AI systems that pass every benchmark still fail in deployment — and can we build evaluations that predict this before it happens?</div>
+      <div class="q-why">Running TrustAI Toolkit across real deployments shows consistent, reproducible gaps between lab performance and production behaviour. I want to formally characterise and predict this.</div>
+      <span class="q-tag">LLM Evaluation</span><span class="q-tag">Deployment Gap</span>
+    </div>
+    <div class="q-card reveal">
+      <div class="q-num">02</div>
+      <div class="q-text">Does provenance infrastructure actually restore epistemic trust after synthetic media exposure — or does it address the wrong layer of the problem?</div>
+      <div class="q-why">Detection accuracy is a solvable engineering problem. Whether people actually update their trust based on provenance signals is a cognitive and social question that my current research hasn't answered.</div>
+      <span class="q-tag">Digital Identity</span><span class="q-tag">Cognitive Science</span>
+    </div>
+    <div class="q-card reveal">
+      <div class="q-num">03</div>
+      <div class="q-text">What does meaningful human oversight of AI actually look like — and how do we distinguish it from the performance of oversight?</div>
+      <div class="q-why">Working with enterprise clients shows that "human-in-the-loop" often means nominal oversight while decisions are effectively automated. I want a framework that can measure the difference.</div>
+      <span class="q-tag">Human-AI Teaming</span><span class="q-tag">HCI</span>
+    </div>
+    <div class="q-card reveal">
+      <div class="q-num">04</div>
+      <div class="q-text">Which AI governance mechanisms in regulated industries actually change deployment behaviour — and which ones exist only to satisfy audit requirements?</div>
+      <div class="q-why">Interviews with AI governance leads across healthcare and finance reveal a consistent pattern: accountability documents are thorough; accountability practices are sparse. I want to explain why and what works instead.</div>
+      <span class="q-tag">AI Governance</span><span class="q-tag">Organisations</span>
+    </div>
+  </div>
+  <div class="section-bridge reveal">
+    <div class="bridge-text">These questions are too large for a company alone to answer, and too applied for a lab alone to answer. <strong>That's exactly why I'm doing both.</strong> The PhD will give me the time, collaborators, and methodological depth to go after them properly.</div>
+    <div class="bridge-label">PhD Target · Fall 2027</div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="section alt" id="story">
+  <div class="s-top reveal">
+    <div class="s-eyebrow neutral"><span class="s-label sl-founder">The Story</span></div>
+    <h2 class="s-title">Why <em>both?</em></h2>
+  </div>
+  <div class="story-grid">
+    <div class="story-left reveal">
+      <p class="story-body">I didn't plan to be a founder. I planned to be a researcher. But <em>the closer I got to the real-world failures of AI systems, the more obvious it became that waiting for a paper to publish wasn't fast enough.</em></p>
+      <p class="story-body">So I started building — not instead of researching, but because of it. Every deployment I run teaches me something that would take years to learn from a lab study. Every interview with a governance lead surfaces a research question I couldn't have written from the inside.</p>
+      <p class="story-body">The PhD is the same logic, one step further. <strong>The questions my company is surfacing are bigger than a startup can systematically answer.</strong> I want to do them justice. Fall 2027 is when I plan to go back, with two years of deployment data and a much sharper set of questions than I started with.</p>
+      <p class="story-body">Both paths are about the same thing: understanding — deeply and honestly — <em>when and why AI systems break human trust, and what it actually takes to fix it.</em></p>
+    </div>
+    <div class="story-right reveal">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+          <div>
+            <div class="tl-year">2023</div>
+            <div class="tl-event">Nature Machine Intelligence publication</div>
+            <div class="tl-detail">First major result on misinformation cascades in AI-generated media ecosystems.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+          <div>
+            <div class="tl-year">2024</div>
+            <div class="tl-event">CHI + FAccT publications</div>
+            <div class="tl-detail">Digital identity and LLM auditing frameworks — and the realisation that the research needed to become a product to reach the people who needed it.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot active"><div class="tl-dot-inner"></div></div>
+          <div>
+            <div class="tl-year">2025 — Now</div>
+            <div class="tl-event">Building the company · Applying to accelerators</div>
+            <div class="tl-detail">TrustAI Toolkit live. SynthID Verify in development. Seeking accelerator partners who believe deep tech is built on research.</div>
+            <span class="tl-badge tb-now">Active · Fundraising</span>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+          <div>
+            <div class="tl-year">Fall 2027</div>
+            <div class="tl-event">PhD — target start date</div>
+            <div class="tl-detail">Return to research with two years of deployment data, a sharper set of questions, and the methodological depth to answer them properly.</div>
+            <span class="tl-badge tb-next">Planned · PhD Applications Opening</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section alt" id="experience">
+  <div class="s-top reveal">
+    <div class="s-eyebrow neutral"><span class="s-label sl-founder">Background</span></div>
+    <h2 class="s-title">Where I've <em>been</em></h2>
+    <p class="s-sub">A decade of building systems across enterprise, research, and early-stage — from Infosys and Shell to UC Santa Cruz's AI labs. Each role sharpened a different part of what I'm building now.</p>
+  </div>
+
+  <div class="exp-layout">
+    <!-- RESEARCH TRACK -->
+    <div class="exp-col reveal">
+      <div class="exp-col-label research">Research Track</div>
+
+      <div class="exp-item">
+        <div class="exp-logo">🔬</div>
+        <div>
+          <div class="exp-role">Research &amp; Dev Engineer I</div>
+          <div class="exp-org">University of California, Santa Cruz — AIEA Lab</div>
+          <div class="exp-meta"><span>Jul 2024 – Dec 2024</span><span class="exp-meta-dot">·</span><span>Santa Cruz, CA</span></div>
+          <div class="exp-desc">Built interpretable AI infrastructure systems for autonomous vehicles — designing evaluation pipelines where model decisions had to be legible, auditable, and safe under edge-case pressure.</div>
+          <div class="exp-why">Where I learned that interpretability isn't a nice-to-have — it's the difference between a system you can trust and one you're just hoping works.</div>
+          <div class="exp-tags"><span class="exp-tag r">Interpretable AI</span><span class="exp-tag r">Self-Driving</span><span class="exp-tag r">AI Safety</span></div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-logo">🎓</div>
+        <div>
+          <div class="exp-role">Research Engineer</div>
+          <div class="exp-org">University of California, Santa Cruz</div>
+          <div class="exp-meta"><span>Dec 2023 – Jun 2024</span><span class="exp-meta-dot">·</span><span>Santa Cruz, CA</span></div>
+          <div class="exp-desc">Conducted applied research at the intersection of AI systems and real-world deployment — bridging the gap between experimental results and production reliability.</div>
+          <div class="exp-why">The role that crystallised my core research question: why do systems that work in the lab consistently break in the wild?</div>
+          <div class="exp-tags"><span class="exp-tag r">Applied Research</span><span class="exp-tag r">AI Systems</span></div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-logo">📖</div>
+        <div>
+          <div class="exp-role">Graduate Teaching Assistant</div>
+          <div class="exp-org">University of California, Santa Cruz</div>
+          <div class="exp-meta"><span>Sep 2021 – Jun 2023</span><span class="exp-meta-dot">·</span><span>1 yr 10 mos</span></div>
+          <div class="exp-desc">Led sections, designed problem sets, and mentored graduate students across database systems and programming courses. Developed a real understanding of how people learn to think computationally.</div>
+          <div class="exp-tags"><span class="exp-tag r">Teaching</span><span class="exp-tag n">Databases</span><span class="exp-tag n">Python</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INDUSTRY TRACK -->
+    <div class="exp-col reveal">
+      <div class="exp-col-label industry">Industry &amp; Founder Track</div>
+
+      <div class="exp-item">
+        <div class="exp-logo">🚀</div>
+        <div>
+          <div class="exp-role">Founding Software Automation Engineer</div>
+          <div class="exp-org">MetaJungle</div>
+          <div class="exp-meta"><span>Jul 2023 – Nov 2023</span><span class="exp-meta-dot">·</span><span>Missouri, US</span></div>
+          <div class="exp-desc">Employee zero on the engineering side — built a blockchain-integrated NFT indexing and marketplace platform from scratch, making every architectural decision under production pressure with zero safety net.</div>
+          <div class="exp-why">My first founding role. Learned that "move fast" and "build right" aren't opposites — they just require being very honest about which decisions are reversible.</div>
+          <div class="exp-tags"><span class="exp-tag f">Founding Engineer</span><span class="exp-tag f">Blockchain</span><span class="exp-tag n">Ethereum</span></div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-logo">🏥</div>
+        <div>
+          <div class="exp-role">Software Automation Engineer Intern</div>
+          <div class="exp-org">Inovalon</div>
+          <div class="exp-meta"><span>Jun 2022 – Aug 2022</span><span class="exp-meta-dot">·</span><span>Maryland, US · Remote</span></div>
+          <div class="exp-desc">Built automation frameworks for healthcare data pipelines — working inside a regulated industry where every pipeline failure has a patient at the end of it.</div>
+          <div class="exp-why">First real encounter with the accountability gap in regulated AI: the documentation said one thing, the deployment did another. I've been thinking about that gap ever since.</div>
+          <div class="exp-tags"><span class="exp-tag f">Healthcare Data</span><span class="exp-tag n">APIs</span><span class="exp-tag f">Regulated Industry</span></div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-logo">🌐</div>
+        <div>
+          <div class="exp-role">Software AI Automation Engineer</div>
+          <div class="exp-org">Shell</div>
+          <div class="exp-meta"><span>Aug 2019 – Aug 2021</span><span class="exp-meta-dot">·</span><span>2 yrs · Bengaluru, India</span></div>
+          <div class="exp-desc">Engineered scalable, reliable automation frameworks for enterprise-scale web platforms at a global energy company — building systems that had to work across teams, time zones, and edge cases nobody documented.</div>
+          <div class="exp-tags"><span class="exp-tag f">Enterprise Scale</span><span class="exp-tag n">Infrastructure</span><span class="exp-tag n">Automation</span></div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-logo">💼</div>
+        <div>
+          <div class="exp-role">Technology Analyst &amp; Software Automation Engineer</div>
+          <div class="exp-org">Infosys</div>
+          <div class="exp-meta"><span>Dec 2015 – Jul 2019</span><span class="exp-meta-dot">·</span><span>3 yrs 8 mos</span></div>
+          <div class="exp-desc">Built scalable automation frameworks for healthcare platforms across a 3.5-year tenure — my foundation in understanding how large, complex systems serving real people can be made reliable and accountable at scale.</div>
+          <div class="exp-tags"><span class="exp-tag f">Healthcare Platforms</span><span class="exp-tag n">Java</span><span class="exp-tag n">Automation</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOLUNTEER -->
+<section class="section" id="volunteer">
+  <div class="s-top reveal">
+    <div class="s-eyebrow neutral"><span class="s-label sl-phd">Volunteer &amp; Community</span></div>
+    <h2 class="s-title">Giving <em>back</em></h2>
+    <p class="s-sub">Work beyond the job description — communities, causes, and people I've shown up for.</p>
+  </div>
+  <div class="vol-grid">
+    <div class="vol-card reveal">
+      <div class="vol-icon">🌱</div>
+      <div class="vol-org">[Organization Name]</div>
+      <div class="vol-role">[Your Role]</div>
+      <div class="vol-desc">[What you did and why it mattered — one or two sentences.]</div>
+      <div class="vol-period">[Year – Year]</div>
+    </div>
+    <div class="vol-card reveal">
+      <div class="vol-icon">🤝</div>
+      <div class="vol-org">[Organization Name]</div>
+      <div class="vol-role">[Your Role]</div>
+      <div class="vol-desc">[What you did and why it mattered — one or two sentences.]</div>
+      <div class="vol-period">[Year – Year]</div>
+    </div>
+    <div class="vol-card reveal">
+      <div class="vol-icon">💡</div>
+      <div class="vol-org">[Organization Name]</div>
+      <div class="vol-role">[Your Role]</div>
+      <div class="vol-desc">[What you did and why it mattered — one or two sentences.]</div>
+      <div class="vol-period">[Year – Year]</div>
+    </div>
+  </div>
+</section>
+
+<!-- BEYOND THE WORK -->
+<section class="section alt" id="beyond">
+  <div class="s-top reveal">
+    <div class="s-eyebrow neutral"><span class="s-label sl-founder">A little more me</span></div>
+    <h2 class="s-title">When I'm not <em>building</em></h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+
+    <div class="vol-card reveal" style="text-align:center;padding:2.5rem 2rem;">
+      <div style="font-size:2.5rem;margin-bottom:1.25rem;">🎹</div>
+      <div class="vol-org">Piano</div>
+      <div class="vol-desc" style="margin-top:.5rem;">Music is the one place where I get to be wrong in a way that still sounds beautiful. Playing piano keeps me patient — and reminds me that complexity can resolve into something coherent if you give it enough time.</div>
+    </div>
+
+    <div class="vol-card reveal" style="text-align:center;padding:2.5rem 2rem;">
+      <div style="font-size:2.5rem;margin-bottom:1.25rem;">♟️</div>
+      <div class="vol-org">Chess</div>
+      <div class="vol-desc" style="margin-top:.5rem;">Chess taught me that the most important move is usually not the most obvious one — and that understanding your opponent's constraints matters as much as knowing your own. That lesson shows up in my research more than I expected.</div>
+    </div>
+
+    <div class="vol-card reveal" style="text-align:center;padding:2.5rem 2rem;">
+      <div style="font-size:2.5rem;margin-bottom:1.25rem;">🎾</div>
+      <div class="vol-org">Tennis</div>
+      <div class="vol-desc" style="margin-top:.5rem;">Tennis is where I go to get out of my head. There's something clarifying about a problem that demands your full body, not just your brain — and the humility of a sport that will always be better than you are.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section dark" id="contact">
+  <div class="contact-grid">
+    <div class="contact-left reveal">
+      <div class="contact-eyebrow">Let's Talk</div>
+      <h2 class="contact-heading">I'd love to hear from you — really.</h2>
+      <p class="contact-body">Whether you're an accelerator, an investor, a professor thinking about the same questions, or a potential collaborator — my inbox is genuinely open. Chai optional but encouraged.</p>
+      <div class="who-cards">
+        <div class="who-card">
+          <div class="wc-label founder">For Accelerators &amp; Investors</div>
+          <div class="wc-text">I'm building accountable AI infrastructure backed by peer-reviewed research. If you back deep-tech founders with genuine domain expertise, let's talk.</div>
+        </div>
+        <div class="who-card">
+          <div class="wc-label phd">For Faculty &amp; Research Collaborators</div>
+          <div class="wc-text">I have deployment data and open questions that I can't answer alone. If your research overlaps with mine, I'd love to find out what we could build together before 2027.</div>
+        </div>
+        <div class="who-card">
+          <div class="wc-label founder">For Potential Users &amp; Partners</div>
+          <div class="wc-text">If you work in a regulated industry and are wrestling with AI accountability, I want to hear your story — and you should probably know about what I'm building.</div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-right reveal">
+      <div class="ch-list">
+        <a class="ch-row" href="mailto:ananya@example.com">
+          <div class="ch-left"><span class="ch-name">ananya@example.com</span><span class="ch-hint">Fastest — I read everything</span></div>
+          <span class="ch-arr">→</span>
+        </a>
+        <a class="ch-row" href="#">
+          <div class="ch-left"><span class="ch-name">Download CV</span><span class="ch-hint">Full academic + founder background</span></div>
+          <span class="ch-arr">↓</span>
+        </a>
+        <a class="ch-row" href="https://scholar.google.com/">
+          <div class="ch-left"><span class="ch-name">Google Scholar</span><span class="ch-hint">Publications &amp; citation record</span></div>
+          <span class="ch-arr">→</span>
+        </a>
+        <a class="ch-row" href="https://github.com/">
+          <div class="ch-left"><span class="ch-name">GitHub</span><span class="ch-hint">Open-source toolkits &amp; research code</span></div>
+          <span class="ch-arr">→</span>
+        </a>
+        <a class="ch-row" href="https://www.linkedin.com/">
+          <div class="ch-left"><span class="ch-name">LinkedIn</span><span class="ch-hint">Professional background</span></div>
+          <span class="ch-arr">→</span>
+        </a>
+        <a class="ch-row" href="https://twitter.com/">
+          <div class="ch-left"><span class="ch-name">Twitter / X</span><span class="ch-hint">Research threads &amp; commentary</span></div>
+          <span class="ch-arr">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Ananya D.</span>
+  <span>Founder · Researcher · PhD Applicant Fall 2027</span>
+</footer>
+
+<script>
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const idx=Array.from(e.target.parentNode.children).indexOf(e.target);
+      e.target.style.transitionDelay=(idx%4)*.1+'s';
+      e.target.classList.add('on');
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.08,rootMargin:'0px 0px -24px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
