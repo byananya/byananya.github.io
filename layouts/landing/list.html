@@ -64,8 +64,8 @@ nav{
 .hero-inner{
   position:relative;z-index:1;
   padding:5rem 3.5rem 3rem;
-  display:grid;grid-template-columns:1fr 640px;gap:4rem;align-items:center;
-  max-width:1320px;
+  display:grid;grid-template-columns:1fr 380px;gap:5rem;align-items:center;
+  max-width:1200px;
 }
 
 /* left */
@@ -117,7 +117,7 @@ nav{
   border-radius:18px;overflow:hidden;
   background:linear-gradient(160deg,var(--cream) 0%,var(--blush) 45%,var(--rose) 100%);
   border:1px solid var(--rule);
-  aspect-ratio:3/4;flex:0 0 260px;
+  aspect-ratio:3/4;width:100%;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;
   position:relative;cursor:pointer;
   box-shadow:0 8px 40px rgba(39,21,16,.08);
@@ -131,15 +131,7 @@ nav{
 .h-photo-sub{font-size:.56rem;font-weight:400;color:var(--muted);opacity:.6;text-align:center;}
 
 /* right column wrapper */
-.h-right{display:flex;flex-direction:row;gap:1.25rem;align-items:stretch;}
-
-/* right card */
-.h-card{
-  background:#fff;border:1px solid var(--rule);border-radius:20px;
-  padding:2rem;flex:1;
-  display:flex;flex-direction:column;gap:1.5rem;
-  box-shadow:0 8px 40px rgba(39,21,16,.06);
-}
+.h-right{display:flex;align-items:stretch;}
 .hc-section-label{
   font-size:0.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
   color:var(--faint);margin-bottom:.6rem;
@@ -579,50 +571,6 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
 
     <!-- RIGHT COLUMN -->
     <div class="h-right fade-up d3">
-
-      <!-- Stats card -->
-      <div class="h-card">
-      <div>
-        <div class="hc-section-label">At a glance</div>
-        <div class="hc-stat-row">
-          <span class="hc-stat">3 publications</span>
-          <span class="hc-stat">CHI · FAccT · Nature MI</span>
-          <span class="hc-stat">2 open-source toolkits</span>
-          <span class="hc-stat">3 active projects</span>
-        </div>
-      </div>
-      <div>
-        <div class="hc-section-label">Recent work</div>
-        <ul class="hc-pub-list">
-          <li>
-            <div class="hc-pub-dot"></div>
-            <div>
-              <span class="hc-venue">CHI 2024</span>
-              Generative AI and the Crisis of Digital Identity
-            </div>
-          </li>
-          <li>
-            <div class="hc-pub-dot"></div>
-            <div>
-              <span class="hc-venue">FAccT 2024</span>
-              A Framework for Auditing Large Language Models
-            </div>
-          </li>
-          <li>
-            <div class="hc-pub-dot"></div>
-            <div>
-              <span class="hc-venue">Nature MI · 2023</span>
-              Misinformation Cascades in Generative Media Ecosystems
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <div class="hc-section-label">The question driving everything</div>
-        <div class="hc-q-box">
-          "When AI systems fail in the wild, why does it almost never look like how we imagined it would in the lab?"
-        </div>
-      </div><!-- end h-card -->
 
       <!-- Large photo placeholder -->
       <div class="h-photo" title="Add a large photo">
