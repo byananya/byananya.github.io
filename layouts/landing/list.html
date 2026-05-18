@@ -112,24 +112,6 @@ nav{
 .cta-c{font-size:.75rem;font-weight:500;color:var(--muted);text-decoration:none;border-bottom:1px dashed var(--rule);padding-bottom:1px;transition:all .2s;}
 .cta-c:hover{color:var(--plum);border-color:var(--plum);}
 
-/* avatar */
-.h-avatar{
-  width:88px;height:88px;border-radius:50%;
-  background:linear-gradient(135deg,var(--blush) 0%,var(--rose) 60%,var(--dusty) 100%);
-  border:3px solid #fff;
-  box-shadow:0 4px 20px rgba(140,61,42,.18);
-  display:flex;align-items:center;justify-content:center;
-  margin-bottom:1.75rem;overflow:hidden;position:relative;cursor:pointer;
-  transition:box-shadow .2s;
-}
-.h-avatar:hover{box-shadow:0 6px 28px rgba(140,61,42,.28);}
-.h-avatar img{width:100%;height:100%;object-fit:cover;}
-.h-avatar-placeholder{
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
-}
-.h-avatar-placeholder svg{width:28px;height:28px;opacity:.55;}
-.h-avatar-placeholder span{font-size:.5rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--deep);opacity:.6;}
-
 /* large photo */
 .h-photo{
   border-radius:18px;overflow:hidden;
@@ -563,15 +545,6 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
   <div class="hero-inner">
     <!-- LEFT -->
     <div>
-      <!-- Profile avatar -->
-      <div class="h-avatar fade-up" title="Add your profile photo">
-        <div class="h-avatar-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--deep)">
-            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-          </svg>
-        </div>
-      </div>
-
       <div class="h-eyebrow fade-up">AI Researcher · Founder · Builder</div>
 
       <h1 class="h-headline fade-up d1">
