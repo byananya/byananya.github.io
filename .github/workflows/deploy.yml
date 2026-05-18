@@ -25,10 +25,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Copy HTML to site folder
+      - name: Copy HTML and static assets to site folder
         run: |
-          mkdir -p _site
+          mkdir -p _site/images
           cp layouts/landing/list.html _site/index.html
+          cp -r static/images/. _site/images/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
