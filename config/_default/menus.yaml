@@ -8,9 +8,9 @@ main:
   - name: Venture
     url: '/#venture'
     weight: 30
-  - name: Publications
-    url: '/#publications'
-    weight: 40
+#  - name: Publications
+#    url: '/#publications'
+#    weight: 40
   - name: Projects
     url: '/#projects'
     weight: 50

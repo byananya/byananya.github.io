@@ -51,19 +51,19 @@ sections:
     design:
       columns: '1'
 
-  - block: collection
-    id: publications
-    content:
-      title: Selected Publications & Preprints
-      text: ''
-      filters:
-        folders:
-          - publication
-        featured_only: true
-      count: 6
-    design:
-      view: citation
-      columns: '1'
+#  - block: collection
+#    id: publications
+#    content:
+#      title: Selected Publications & Preprints
+#      text: ''
+#      filters:
+#        folders:
+#          - publication
+#        featured_only: true
+#      count: 6
+#    design:
+#      view: citation
+#      columns: '1'
 
   - block: collection
     id: projects
