@@ -30,6 +30,7 @@ jobs:
           mkdir -p _site/images
           cp layouts/landing/list.html _site/index.html
           cp -r static/images/. _site/images/
+          cp "static/images/Firefly_Gemini Flash_change the portrait color to the background color of the second banner image without  800479 (1).png" _site/images/profile.png
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
