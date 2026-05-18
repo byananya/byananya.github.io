@@ -64,8 +64,8 @@ nav{
 .hero-inner{
   position:relative;z-index:1;
   padding:5rem 3.5rem 3rem;
-  display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:center;
-  max-width:1200px;
+  display:grid;grid-template-columns:1fr 580px;gap:4rem;align-items:center;
+  max-width:1280px;
 }
 
 /* left */
@@ -117,28 +117,27 @@ nav{
   border-radius:18px;overflow:hidden;
   background:linear-gradient(160deg,var(--cream) 0%,var(--blush) 45%,var(--rose) 100%);
   border:1px solid var(--rule);
-  aspect-ratio:4/5;width:100%;
+  aspect-ratio:3/4;flex:0 0 220px;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;
   position:relative;cursor:pointer;
   box-shadow:0 8px 40px rgba(39,21,16,.08);
   transition:box-shadow .2s;
-  margin-bottom:1.25rem;
 }
 .h-photo:hover{box-shadow:0 12px 48px rgba(39,21,16,.13);}
 .h-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 .h-photo-placeholder{display:flex;flex-direction:column;align-items:center;gap:.6rem;z-index:1;}
-.h-photo-placeholder svg{width:40px;height:40px;opacity:.35;}
-.h-photo-label{font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--dusty);opacity:.7;}
-.h-photo-sub{font-size:.58rem;font-weight:400;color:var(--muted);opacity:.6;}
+.h-photo-placeholder svg{width:36px;height:36px;opacity:.35;}
+.h-photo-label{font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--dusty);opacity:.7;}
+.h-photo-sub{font-size:.56rem;font-weight:400;color:var(--muted);opacity:.6;text-align:center;}
 
 /* right column wrapper */
-.h-right{display:flex;flex-direction:column;gap:0;}
+.h-right{display:flex;flex-direction:row;gap:1.25rem;align-items:stretch;}
 
 /* right card */
 .h-card{
   background:#fff;border:1px solid var(--rule);border-radius:20px;
-  padding:2.25rem;
-  display:flex;flex-direction:column;gap:1.75rem;
+  padding:2rem;flex:1;
+  display:flex;flex-direction:column;gap:1.5rem;
   box-shadow:0 8px 40px rgba(39,21,16,.06);
 }
 .hc-section-label{
@@ -516,7 +515,8 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
   .pub-yr{display:none;}
   .pub-links{flex-direction:row;align-items:flex-start;}
   .ticker{display:none;}
-  .h-photo{aspect-ratio:16/9;}
+  .h-right{flex-direction:column;}
+  .h-photo{flex:none;aspect-ratio:16/9;width:100%;}
 }
 </style>
 </head>
