@@ -69,6 +69,12 @@ nav{
 }
 
 /* left */
+.h-name{
+  font-family:'Instrument Serif',serif;
+  font-size:1.1rem;font-style:italic;
+  color:var(--dusty);margin-bottom:0.5rem;
+  letter-spacing:0.02em;
+}
 .h-eyebrow{
   display:flex;align-items:center;gap:0.6rem;
   font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;
@@ -516,12 +522,12 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
 
 <!-- NAV -->
 <nav>
-  <a class="n-logo" href="#">Ananya <em>D.</em></a>
+  <!-- <a class="n-logo" href="#">Ananya <em>D.</em></a> -->
   <ul class="n-links">
     <li><a href="#building">Building</a></li>
-    <li><a href="#research">Research</a></li>
-    <li><a href="#questions">Open Questions</a></li>
-    <li><a href="#story">Story</a></li>
+    <!-- <li><a href="#research">Research</a></li> -->
+    <!-- <li><a href="#questions">Open Questions</a></li> -->
+    <!-- <li><a href="#story">Story</a></li> -->
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Let's Talk</a></li>
   </ul>
@@ -537,6 +543,7 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
   <div class="hero-inner">
     <!-- LEFT -->
     <div>
+      <div class="h-name fade-up">Ananya D.</div>
       <div class="h-eyebrow fade-up">Founder · Builder · AI Researcher</div>
 
       <h1 class="h-headline fade-up d1">
@@ -637,10 +644,41 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
         </div>
       </div>
     </div>
+    <!-- Traction aside — commented out
+    <div class="build-aside reveal">
+      <div class="traction-card">
+        <div class="tc-label">Traction &amp; Ask</div>
+        <div class="tc-stats">
+          <div>
+            <div class="tc-stat-val">[X]</div>
+            <div class="tc-stat-lbl">GitHub stars on TrustAI Toolkit</div>
+          </div>
+          <div class="tc-divider"></div>
+          <div>
+            <div class="tc-stat-val">[X]</div>
+            <div class="tc-stat-lbl">Research groups using the framework</div>
+          </div>
+          <div class="tc-divider"></div>
+          <div>
+            <div class="tc-stat-val">[X]</div>
+            <div class="tc-stat-lbl">Enterprise pilots in progress</div>
+          </div>
+          <div class="tc-divider"></div>
+          <div>
+            <div class="tc-stat-val">3</div>
+            <div class="tc-stat-lbl">Peer-reviewed publications backing the thesis</div>
+          </div>
+        </div>
+        <div class="tc-ask">
+          <strong>Currently raising:</strong> [Pre-seed / Seed] to accelerate deployment of the TrustAI Toolkit and SynthID Verify API. Looking for partners who understand that the best companies in deep tech are built on research.
+        </div>
+      </div>
+    </div>
+    -->
   </div>
 </section>
 
-<!-- RESEARCH -->
+<!-- RESEARCH, PUBLICATIONS, OPEN QUESTIONS, STORY — commented out
 <section class="section blush" id="research">
   <div class="s-top reveal">
     <div class="s-eyebrow phd"><span class="s-label sl-phd">Researcher · PhD Applicant Fall 2027</span></div>
@@ -663,7 +701,6 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
   </div>
 </section>
 
-<!-- PUBLICATIONS -->
 <section class="section">
   <div class="s-top reveal">
     <div class="s-eyebrow neutral"><span class="s-label sl-phd">Publications</span></div>
@@ -700,7 +737,7 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
   </div>
 </section>
 
-<!-- OPEN QUESTIONS -->
+<!--
 <section class="section dark" id="questions">
   <div class="s-top reveal">
     <div class="s-eyebrow light"><span style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);">Open Questions · PhD Research Direction</span></div>
@@ -738,8 +775,9 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
     <div class="bridge-label">PhD Target · Fall 2027</div>
   </div>
 </section>
+-->
 
-<!-- STORY -->
+<!--
 <section class="section alt" id="story">
   <div class="s-top reveal">
     <div class="s-eyebrow neutral"><span class="s-label sl-founder">The Story</span></div>
@@ -792,13 +830,14 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
     </div>
   </div>
 </section>
+-->
 
 <!-- EXPERIENCE -->
 <section class="section alt" id="experience">
   <div class="s-top reveal">
     <div class="s-eyebrow neutral"><span class="s-label sl-founder">Background</span></div>
     <h2 class="s-title">Where I've <em>been</em></h2>
-    <p class="s-sub">A decade of building systems across enterprise, research, and early-stage — from Infosys and Shell to UC Santa Cruz's AI labs. Each role sharpened a different part of what I'm building now.</p>
+    <p class="s-sub">Five years of building systems across enterprise, research, and early-stage — from Infosys and Shell to UC Santa Cruz's AI labs. Each role sharpened a different part of what I'm building now.</p>
   </div>
 
   <div class="exp-layout">
@@ -845,6 +884,27 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
     <!-- INDUSTRY TRACK -->
     <div class="exp-col reveal">
       <div class="exp-col-label industry">Industry &amp; Founder Track</div>
+
+      <div class="exp-item">
+        <div class="exp-logo">🚀</div>
+        <div>
+          <div class="exp-role">Founder</div>
+          <div class="exp-org">Stealth</div>
+          <div class="exp-meta"><span>May 2026 – Present</span></div>
+          <div class="exp-tags"><span class="exp-tag f">Founder</span></div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-logo">⭐</div>
+        <div>
+          <div class="exp-role">Founder</div>
+          <div class="exp-org">Asteris AI</div>
+          <div class="exp-meta"><span>2025 – 2026</span></div>
+          <div class="exp-desc">Explored building automation infrastructure for FinOps. Validated the problem space, decided not to pursue it further.</div>
+          <div class="exp-tags"><span class="exp-tag f">Founder</span><span class="exp-tag n">FinOps</span><span class="exp-tag n">Automation</span></div>
+        </div>
+      </div>
 
       <div class="exp-item">
         <div class="exp-logo">🚀</div>
@@ -966,7 +1026,7 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
       <div class="who-cards">
         <div class="who-card">
           <div class="wc-label founder">For Accelerators &amp; Investors</div>
-          <div class="wc-text">I'm building accountable AI infrastructure backed by peer-reviewed research. If you back deep-tech founders with genuine domain expertise, let's talk.</div>
+          <div class="wc-text">I'm building accountable AI infrastructure. If you back deep-tech founders with genuine domain expertise, let's talk.</div>
         </div>
         <div class="who-card">
           <div class="wc-label phd">For Faculty &amp; Research Collaborators</div>
@@ -980,27 +1040,27 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
     </div>
     <div class="contact-right reveal">
       <div class="ch-list">
-        <a class="ch-row" href="mailto:ananya@example.com">
-          <div class="ch-left"><span class="ch-name">ananya@example.com</span><span class="ch-hint">Fastest — I read everything</span></div>
+        <a class="ch-row" href="mailto:founderpulsepro@gmail.com">
+          <div class="ch-left"><span class="ch-name">founderpulsepro@gmail.com</span><span class="ch-hint">Fastest — I read everything</span></div>
           <span class="ch-arr">→</span>
         </a>
-        <a class="ch-row" href="#">
-          <div class="ch-left"><span class="ch-name">Download CV</span><span class="ch-hint">Full academic + founder background</span></div>
+        <a class="ch-row" href="mailto:adas13@ucsc.edu?subject=CV Request">
+          <div class="ch-left"><span class="ch-name">Download CV</span><span class="ch-hint">Email adas13@ucsc.edu to request</span></div>
           <span class="ch-arr">↓</span>
         </a>
         <a class="ch-row" href="https://scholar.google.com/">
           <div class="ch-left"><span class="ch-name">Google Scholar</span><span class="ch-hint">Publications &amp; citation record</span></div>
           <span class="ch-arr">→</span>
         </a>
-        <a class="ch-row" href="https://github.com/">
+        <a class="ch-row" href="https://github.com/byananya" target="_blank" rel="noopener">
           <div class="ch-left"><span class="ch-name">GitHub</span><span class="ch-hint">Open-source toolkits &amp; research code</span></div>
           <span class="ch-arr">→</span>
         </a>
-        <a class="ch-row" href="https://www.linkedin.com/">
+        <a class="ch-row" href="https://www.linkedin.com/in/ananya-das-a3016059/" target="_blank" rel="noopener">
           <div class="ch-left"><span class="ch-name">LinkedIn</span><span class="ch-hint">Professional background</span></div>
           <span class="ch-arr">→</span>
         </a>
-        <a class="ch-row" href="https://twitter.com/">
+        <a class="ch-row" href="https://x.com/byananyad_pro" target="_blank" rel="noopener">
           <div class="ch-left"><span class="ch-name">Twitter / X</span><span class="ch-hint">Research threads &amp; commentary</span></div>
           <span class="ch-arr">→</span>
         </a>
@@ -1011,7 +1071,7 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
 
 <footer>
   <span>© 2026 Ananya D.</span>
-  <span>Founder · Researcher · PhD Applicant Fall 2027</span>
+  <!-- <span>Founder · Researcher · PhD Applicant Fall 2027</span> -->
 </footer>
 
 <script>
