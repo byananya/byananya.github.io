@@ -416,6 +416,29 @@ nav{
 .tb-now{background:rgba(140,61,42,.1);color:var(--deep);}
 .tb-next{background:rgba(78,114,68,.1);color:var(--sage-dk);}
 
+/* ─── OPEN TO COLLABORATE ─── */
+.collab-intro{font-size:.95rem;font-weight:300;color:var(--muted);line-height:1.88;margin-bottom:3rem;max-width:38rem;}
+.collab-intro strong{color:var(--plum);font-weight:500;}
+.collab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.25rem;}
+.collab-card{
+  background:#fff;border:1px solid var(--rule);border-radius:16px;
+  padding:2rem;transition:all .25s;display:flex;flex-direction:column;gap:.75rem;
+}
+.collab-card:hover{border-color:var(--dusty);box-shadow:0 6px 24px rgba(39,21,16,.08);transform:translateY(-2px);}
+.collab-icon{font-size:1.75rem;line-height:1;}
+.collab-type{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dusty);}
+.collab-title{font-family:'Instrument Serif',serif;font-size:1.05rem;color:var(--plum);line-height:1.3;}
+.collab-desc{font-size:.82rem;font-weight:300;color:var(--muted);line-height:1.72;flex:1;}
+.collab-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.25rem;}
+.collab-tag{font-size:.58rem;font-weight:700;letter-spacing:.07em;padding:.18rem .55rem;border-radius:50px;background:var(--blush);color:var(--deep);}
+.collab-cta{
+  display:inline-flex;align-items:center;gap:.4rem;margin-top:2.5rem;
+  font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--deep);text-decoration:none;border-bottom:1.5px solid rgba(140,61,42,.3);
+  padding-bottom:1px;transition:all .2s;width:fit-content;
+}
+.collab-cta:hover{border-color:var(--deep);}
+
 /* ─── CONTACT ─── */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
 .contact-left{}
@@ -541,6 +564,7 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
     <!-- <li><a href="#questions">Open Questions</a></li> -->
     <!-- <li><a href="#story">Story</a></li> -->
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#collaborate">Collaborate</a></li>
     <li><span>Blog</span></li>
   </ul>
   <a class="n-contact" href="#contact">Get in Touch</a>
@@ -1038,6 +1062,62 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
     </div>
 
   </div>
+</section>
+
+<!-- OPEN TO COLLABORATE -->
+<section class="section" id="collaborate">
+  <div class="s-top reveal">
+    <div class="s-eyebrow neutral"><span class="s-label sl-founder">Open to Collaborate</span></div>
+    <h2 class="s-title">Let's build something<br/><em>worth building</em></h2>
+  </div>
+  <p class="collab-intro reveal">
+    I work best at the intersection of hard problems and real stakes. If you're researching, building, or thinking about anything in the space below — <strong>let's talk.</strong>
+  </p>
+  <div class="collab-grid">
+    <div class="collab-card reveal">
+      <div class="collab-icon">🔬</div>
+      <div class="collab-type">Research</div>
+      <div class="collab-title">AI Safety &amp; Evaluation Research</div>
+      <div class="collab-desc">Studying where and why AI systems break trust — benchmarking, red-teaming, deployment gap analysis. Especially keen on joint work with deployment data or novel evaluation methodologies.</div>
+      <div class="collab-tags"><span class="collab-tag">Trustworthy AI</span><span class="collab-tag">LLM Eval</span><span class="collab-tag">AI Safety</span></div>
+    </div>
+    <div class="collab-card reveal">
+      <div class="collab-icon">🪪</div>
+      <div class="collab-type">Research</div>
+      <div class="collab-title">Synthetic Media &amp; Digital Identity</div>
+      <div class="collab-desc">Detection, provenance, and the social science of why people (don't) update trust after deepfake exposure. I have real deployment data; looking for collaborators with complementary methods.</div>
+      <div class="collab-tags"><span class="collab-tag">Deepfakes</span><span class="collab-tag">Provenance</span><span class="collab-tag">Cognitive Science</span></div>
+    </div>
+    <div class="collab-card reveal">
+      <div class="collab-icon">🤝</div>
+      <div class="collab-type">Research &amp; Industry</div>
+      <div class="collab-title">Human-AI Teaming &amp; Governance</div>
+      <div class="collab-desc">Empirical work on what meaningful human oversight actually looks like in regulated industries — healthcare, finance, law. If you're running real deployments, I want to hear what's breaking.</div>
+      <div class="collab-tags"><span class="collab-tag">HCI</span><span class="collab-tag">AI Governance</span><span class="collab-tag">Regulated Industries</span></div>
+    </div>
+    <div class="collab-card reveal">
+      <div class="collab-icon">🚀</div>
+      <div class="collab-type">Founder / Operator</div>
+      <div class="collab-title">Building at the Frontier of Identity &amp; AI</div>
+      <div class="collab-desc">Operators building in synthetic media, personalization infrastructure, or AI accountability tooling. If your product sits on the same boundary mine does, there's likely something we can learn from each other.</div>
+      <div class="collab-tags"><span class="collab-tag">Synthetic Video</span><span class="collab-tag">AI Infrastructure</span><span class="collab-tag">B2B</span></div>
+    </div>
+    <div class="collab-card reveal">
+      <div class="collab-icon">🎤</div>
+      <div class="collab-type">Speaking &amp; Panels</div>
+      <div class="collab-title">Talks on AI Trust, Identity &amp; Governance</div>
+      <div class="collab-desc">I speak on the real-world failure modes of AI systems, the dual-use nature of synthetic media, and what accountability actually requires. Open to conferences, academic seminars, and industry panels.</div>
+      <div class="collab-tags"><span class="collab-tag">Keynotes</span><span class="collab-tag">Panels</span><span class="collab-tag">Workshops</span></div>
+    </div>
+    <div class="collab-card reveal">
+      <div class="collab-icon">💻</div>
+      <div class="collab-type">Open Source</div>
+      <div class="collab-title">AI Auditing &amp; Safety Toolkits</div>
+      <div class="collab-desc">Interested in contributing to or co-maintaining open-source evaluation frameworks for LLM trustworthiness, synthetic media detection, or AI governance tooling. Bring the code or the use case.</div>
+      <div class="collab-tags"><span class="collab-tag">Open Source</span><span class="collab-tag">Tooling</span><span class="collab-tag">Community</span></div>
+    </div>
+  </div>
+  <a class="collab-cta reveal" href="#contact">Reach out to collaborate →</a>
 </section>
 
 <!-- CONTACT -->
