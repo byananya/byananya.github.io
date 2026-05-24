@@ -116,7 +116,7 @@ sections:
         - icon: google-scholar
           icon_pack: ai
           name: Google Scholar
-          link: 'https://scholar.google.com/citations?hl=en&user=U2cpZ-UAAAAJ'
+          link: 'https://scholar.google.com/citations?hl=en&user=U2cpZ-UAAAAJ&scilu=&scisig=AFPfF8cAAAAAahKlH-9me3D9bUjTG-g_aRJiUwQ&gmla=AIqSsVtvkA1865Uc0nzDykAnrMQT08EE80-nEwUUv-qFwDIsLbtLAJmYQvbMp09cU0ZSD-ggOlbGyslREbBbhsyIbuqrdKZ4sCFt83E&sciund=5723484959469291910'
         - icon: github
           icon_pack: fab
           name: GitHub
