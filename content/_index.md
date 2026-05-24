@@ -116,7 +116,7 @@ sections:
         - icon: google-scholar
           icon_pack: ai
           name: Google Scholar
-          link: 'https://scholar.google.com/citations?user=TBD'
+          link: 'https://scholar.google.com/citations?hl=en&user=U2cpZ-UAAAAJ'
         - icon: github
           icon_pack: fab
           name: GitHub

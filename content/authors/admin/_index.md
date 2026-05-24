@@ -31,7 +31,7 @@ social:
     link: uploads/cv.pdf
   - icon: google-scholar
     icon_pack: ai
-    link: 'https://scholar.google.com/citations?user=TBD'
+    link: 'https://scholar.google.com/citations?hl=en&user=U2cpZ-UAAAAJ'
   - icon: github
     icon_pack: fab
     link: 'https://github.com/TBD'
