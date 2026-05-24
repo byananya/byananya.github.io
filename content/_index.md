@@ -98,7 +98,7 @@ sections:
 
         {{< icon name="utensils" pack="fas" >}} **Cooking & Baking**
 
-        I also enjoy cooking haute cuisine, finding joy in the craft of transforming simple ingredients into something refined and intentional. Baking, with its precise ratios and patient processes, feels like a natural complement — equal parts science and artistry.
+        I occasionally dabble in haute cuisine — there's something deeply satisfying about pulling off a dish that takes real technique. Baking is my other kitchen obsession: I love how it demands precision and patience in equal measure, and how that patience actually pays off.
     design:
       columns: '1'
 
