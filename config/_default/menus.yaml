@@ -17,6 +17,9 @@ main:
   - name: Talks
     url: '/#talks'
     weight: 60
+  - name: Beyond
+    url: '/#beyond'
+    weight: 65
   - name: CV
     url: uploads/cv.pdf
     weight: 70
