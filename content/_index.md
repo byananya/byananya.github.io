@@ -20,6 +20,8 @@ sections:
         ### What I've Built So Far
 
         Systems and products I've designed, built, or shipped — across automation, AI, and infrastructure.
+
+        - To be updated
     design:
       columns: '1'
 
@@ -80,7 +82,7 @@ sections:
     id: projects
     content:
       title: Selected Projects
-      text: '- To be updated'
+      text: ''
       filters:
         folders:
           - project
