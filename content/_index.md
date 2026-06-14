@@ -80,7 +80,7 @@ sections:
     id: projects
     content:
       title: Selected Projects
-      text: ''
+      text: '- To be updated'
       filters:
         folders:
           - project
