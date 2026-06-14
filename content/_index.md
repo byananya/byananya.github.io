@@ -13,6 +13,29 @@ sections:
       username: admin
 
   - block: markdown
+    id: built
+    content:
+      title: What I've Built So Far
+      text: |
+        ### Research & Systems
+
+        **Trustworthy AI Audit Framework**\
+        Designed and implemented an auditing framework for evaluating large language models across reliability, fairness, and robustness dimensions — producing structured evaluation reports for high-stakes deployment contexts.
+
+        **SynthID Verification Pipeline**\
+        Built a detection and provenance system for AI-generated synthetic media, focusing on watermark robustness and real-world adversarial conditions.
+
+        **Human-AI Teaming Study Infrastructure**\
+        Developed experimental platforms and analysis pipelines to study how people collaborate with AI in consequential decision-making settings, with a focus on preserving meaningful human agency.
+
+        ### Startup & Products
+
+        **Pulse AI** &nbsp;·&nbsp; Founder\
+        Built an AI-driven identity outreach product from zero — designed the core architecture, ran early user research, and iterated through real deployment friction. The gaps and failure modes I encountered in production directly shaped my current research agenda.
+    design:
+      columns: '1'
+
+  - block: markdown
     id: research
     content:
       title: Research
