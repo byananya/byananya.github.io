@@ -545,6 +545,7 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
 .vol-role{font-size:.75rem;font-weight:600;color:var(--dusty);margin-bottom:.55rem;}
 .vol-desc{font-size:.8rem;font-weight:300;color:var(--muted);line-height:1.72;}
 .vol-period{font-size:.65rem;font-weight:300;color:var(--faint);margin-top:.65rem;}
+.hobby-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
 
 /* ─── RESPONSIVE ─── */
 @media(max-width:960px){
@@ -560,6 +561,7 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
   .h-right{flex-direction:column;}
   .h-photo{flex:none;aspect-ratio:1/1;width:100%;}
   .h-photo img{object-fit:contain;}
+  .hobby-grid{grid-template-columns:repeat(2,1fr);}
 }
 </style>
 </head>
@@ -1005,7 +1007,7 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
     <div class="s-eyebrow neutral"><span class="s-label sl-founder">A little more me</span></div>
     <h2 class="s-title">When I'm not <em>building</em></h2>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+  <div class="hobby-grid">
 
     <div class="vol-card reveal" style="text-align:center;padding:2.5rem 2rem;">
       <div class="vol-org">Classical Piano</div>
