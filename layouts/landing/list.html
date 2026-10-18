@@ -553,6 +553,7 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
   display:grid;grid-template-columns:.85fr 1.15fr;gap:2rem;align-items:center;
   padding:2rem;transition:all .25s;
 }
+.proj-card + .proj-card{margin-top:1.5rem;}
 .proj-card:hover{border-color:var(--dusty);box-shadow:0 6px 24px rgba(39,21,16,.07);}
 .proj-img img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--rule);box-shadow:0 4px 16px rgba(39,21,16,.08);}
 .proj-name{font-family:'Instrument Serif',serif;font-size:1.25rem;color:var(--plum);margin-bottom:.6rem;}
@@ -998,6 +999,19 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
         <span class="pc-tag">MonetDB</span>
         <span class="pc-tag">GAPBS</span>
         <span class="pc-tag">Performance Analysis</span>
+      </div>
+    </div>
+  </div>
+  <div class="proj-card reveal">
+    <div class="proj-img"><img src="/images/projects/lr0-parser.png" alt="LR(0) parsing table and parse tree for the input (x,x)"></div>
+    <div class="proj-body">
+      <div class="proj-name">LR(0) Parser Generator</div>
+      <p class="proj-desc">Built an LR(0) parser generator in Python covering state-diagram construction, action/goto table generation, shift-reduce parsing, and parse-tree output. Also implemented the table generator and parser in Java.</p>
+      <div class="pc-tags">
+        <span class="pc-tag">Python</span>
+        <span class="pc-tag">Java</span>
+        <span class="pc-tag">Compilers</span>
+        <span class="pc-tag">Parsing</span>
       </div>
     </div>
   </div>
