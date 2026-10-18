@@ -547,6 +547,19 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
 .vol-period{font-size:.65rem;font-weight:300;color:var(--faint);margin-top:.65rem;}
 .hobby-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
 
+/* ─── PROJECTS ─── */
+.proj-card{
+  background:#fff;border:1px solid var(--rule);border-radius:18px;
+  overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr;
+  transition:all .25s;
+}
+.proj-card:hover{border-color:var(--dusty);box-shadow:0 6px 24px rgba(39,21,16,.07);}
+.proj-img{background:var(--blush);border-right:1px solid var(--rule);display:flex;align-items:center;}
+.proj-img img{width:100%;height:auto;display:block;}
+.proj-body{padding:2rem;}
+.proj-name{font-family:'Instrument Serif',serif;font-size:1.25rem;color:var(--plum);margin-bottom:.6rem;}
+.proj-desc{font-size:.82rem;font-weight:300;color:var(--muted);line-height:1.75;margin-bottom:.75rem;}
+
 /* ─── RESPONSIVE ─── */
 @media(max-width:960px){
   nav{padding:0 1.5rem;}
@@ -562,6 +575,8 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
   .h-photo{flex:none;aspect-ratio:1/1;width:100%;}
   .h-photo img{object-fit:contain;}
   .hobby-grid{grid-template-columns:repeat(2,1fr);}
+  .proj-card{grid-template-columns:1fr;}
+  .proj-img{border-right:none;border-bottom:1px solid var(--rule);}
 }
 </style>
 </head>
@@ -974,7 +989,20 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
     <div class="s-eyebrow founder"><span class="s-label sl-founder">Projects</span></div>
     <h2 class="s-title">What I've <em>Built So Far</em></h2>
     <p class="s-sub">Systems and products I've designed, built, or shipped — across automation, AI, and infrastructure.</p>
-    <ul><li>To be updated</li></ul>
+  </div>
+  <div class="proj-card reveal">
+    <div class="proj-img"><img src="/images/projects/tidalscale-waverunner.png" alt="TidalScale WaveRunner dashboard showing an 18-node AWS x2iezn.metal pool"></div>
+    <div class="proj-body">
+      <div class="proj-name">Scaling Analytics &amp; Graph Workloads on Software-Defined Servers</div>
+      <p class="proj-desc">Evaluated MonetDB (22 queries) and GAPBS (bc-twitter dataset) on TidalScale software-defined servers, which aggregate multiple physical nodes into a single virtual machine. Runs compared a 1-node baseline against a 3-node configuration (10 cores per node) at 1 to 30 cores.</p>
+      <p class="proj-desc">Removing a compare-and-swap atomic from GAPBS BFS, with results merged after execution, roughly halved 30-core runtime on 3 nodes, a larger gain than on 1 node. This points to cross-node synchronization as a primary scaling bottleneck in this workload.</p>
+      <div class="pc-tags">
+        <span class="pc-tag">TidalScale</span>
+        <span class="pc-tag">MonetDB</span>
+        <span class="pc-tag">GAPBS</span>
+        <span class="pc-tag">Performance Analysis</span>
+      </div>
+    </div>
   </div>
 </section>
 
