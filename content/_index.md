@@ -109,17 +109,6 @@ sections:
     design:
       columns: '1'
 
-  - block: markdown
-    id: beyond
-    content:
-      title: When I'm not building
-      text: |
-        {{< icon name="music" pack="fas" >}} **Classical Dance**
-
-        I'm a trained Bharatanatyam dancer. The precision and discipline of classical form — learning to embody abstract emotion through codified movement — is something I carry into research: rigor as a vehicle for expression.
-    design:
-      columns: '1'
-
   - block: contact
     id: contact
     content:
