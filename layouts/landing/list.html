@@ -550,13 +550,11 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
 /* ─── PROJECTS ─── */
 .proj-card{
   background:#fff;border:1px solid var(--rule);border-radius:18px;
-  overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr;
-  transition:all .25s;
+  display:grid;grid-template-columns:.85fr 1.15fr;gap:2rem;align-items:center;
+  padding:2rem;transition:all .25s;
 }
 .proj-card:hover{border-color:var(--dusty);box-shadow:0 6px 24px rgba(39,21,16,.07);}
-.proj-img{background:var(--blush);border-right:1px solid var(--rule);display:flex;align-items:center;}
-.proj-img img{width:100%;height:auto;display:block;}
-.proj-body{padding:2rem;}
+.proj-img img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--rule);box-shadow:0 4px 16px rgba(39,21,16,.08);}
 .proj-name{font-family:'Instrument Serif',serif;font-size:1.25rem;color:var(--plum);margin-bottom:.6rem;}
 .proj-desc{font-size:.82rem;font-weight:300;color:var(--muted);line-height:1.75;margin-bottom:.75rem;}
 
@@ -575,8 +573,7 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
   .h-photo{flex:none;aspect-ratio:1/1;width:100%;}
   .h-photo img{object-fit:contain;}
   .hobby-grid{grid-template-columns:repeat(2,1fr);}
-  .proj-card{grid-template-columns:1fr;}
-  .proj-img{border-right:none;border-bottom:1px solid var(--rule);}
+  .proj-card{grid-template-columns:1fr;gap:1.5rem;padding:1.5rem;}
 }
 </style>
 </head>
