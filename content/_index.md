@@ -63,11 +63,11 @@ sections:
     content:
       title: Venture / Startup
       text: |
-        **Pulse AI** &nbsp;·&nbsp; Founder & CEO &nbsp;·&nbsp; Stealth
+        **Pulse AI** &nbsp;·&nbsp; Founder, CEO & CTO &nbsp;·&nbsp; Stealth
 
         Pulse AI is building in the space of AI-driven identity outreach, grounded in the same research problems I study academically — trustworthy AI, digital identity, and how people and institutions navigate AI-mediated interactions.
 
-        - **Role:** Founder & CEO — TBD
+        - **Role:** Founder, CEO & CTO
         - **Traction / Outcome:** TBD
         - **Research connection:** Building Pulse AI surfaced real-world failure modes in AI identity systems that academic benchmarks miss — directly shaping my PhD research agenda
     design:
