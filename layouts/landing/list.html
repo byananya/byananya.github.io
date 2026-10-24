@@ -584,7 +584,6 @@ footer span{font-size:.7rem;font-weight:600;color:rgba(255,255,255,.55);letter-s
   padding:2rem;transition:all .25s;
 }
 .proj-card + .proj-card{margin-top:1.5rem;}
-.proj-card.no-img{grid-template-columns:1fr;}
 .proj-card:hover{border-color:var(--dusty);box-shadow:0 6px 24px rgba(39,21,16,.07);}
 .proj-img img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--rule);box-shadow:0 4px 16px rgba(39,21,16,.08);}
 .proj-name{font-family:'Instrument Serif',serif;font-size:1.25rem;color:var(--plum);margin-bottom:.6rem;}
@@ -1071,10 +1070,12 @@ footer span{font-size:.7rem;font-weight:600;color:rgba(255,255,255,.55);letter-s
       </div>
     </div>
   </div>
-  <div class="proj-card no-img reveal">
+  <div class="proj-card reveal">
+    <div class="proj-img"><img src="/images/projects/cpu-scheduling-slowdown.webp" alt="CDF of job slowdown on a log scale for FCFS, SJF, SRTF, Priority, RR, and MLFQ under Pareto(alpha 1.5) bursts at 85% load: SRTF finishes every job under 8x slowdown, while Priority and FCFS tails exceed 400x"></div>
     <div class="proj-body">
       <div class="proj-name">CPU Scheduling Algorithm Comparison</div>
-      <p class="proj-desc">Undergraduate project: implemented and compared CPU scheduling algorithms on simulated workloads.</p>
+      <p class="proj-desc">Undergraduate project: implemented and compared FCFS, SJF, SRTF, Priority, Round Robin, and MLFQ scheduling on simulated heavy-tailed workloads.</p>
+      <p class="proj-desc">Under Pareto bursts at 85% load, SRTF kept every job under 8&times; slowdown; Priority scheduling&rsquo;s tail exceeded 1000&times;.</p>
       <div class="pc-tags">
         <span class="pc-tag">Undergraduate Project</span>
         <span class="pc-tag">Operating Systems</span>
