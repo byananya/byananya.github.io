@@ -225,27 +225,6 @@ nav{
 }
 .s-sub.light{color:rgba(255,255,255,.42);}
 
-/* ─── PROBLEM SECTION ─── */
-.problem-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3.5rem;
-}
-.prob-card{
-  background:#fff;border:1px solid var(--rule);border-radius:16px;
-  padding:2rem;transition:all .25s;
-}
-.prob-card:hover{border-color:var(--rose);box-shadow:0 6px 24px rgba(39,21,16,.07);}
-.prob-card-label{
-  font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--dusty);margin-bottom:.9rem;
-  display:flex;align-items:center;gap:.5rem;
-}
-.prob-card-label::before{content:'';width:1rem;height:1px;background:currentColor;}
-.prob-card-stat{
-  font-family:'Instrument Serif',serif;
-  font-size:2rem;color:var(--plum);line-height:1;margin-bottom:.5rem;
-}
-.prob-card-text{font-size:.85rem;font-weight:300;color:var(--muted);line-height:1.75;}
-
 /* ─── BUILDING SECTION ─── */
 .build-layout{display:grid;grid-template-columns:2fr 1fr;gap:4rem;align-items:start;}
 .build-main{}
@@ -579,7 +558,7 @@ footer span{font-size:.7rem;font-weight:600;color:rgba(255,255,255,.55);letter-s
 @media(max-width:960px){
   nav{padding:0 1.5rem;}
   .n-links{display:none;}
-  .hero-inner,.problem-grid,.build-layout,.research-layout,.story-grid,.contact-grid,.q-grid,.exp-layout{grid-template-columns:1fr;}
+  .hero-inner,.build-layout,.research-layout,.story-grid,.contact-grid,.q-grid,.exp-layout{grid-template-columns:1fr;}
   .build-aside,.research-aside{position:static;}
   .section{padding:5rem 1.75rem;}
   .pub-row{grid-template-columns:1fr;}
@@ -629,7 +608,7 @@ footer span{font-size:.7rem;font-weight:600;color:rgba(255,255,255,.55);letter-s
 
 <div class="h-ctas fade-up d4">
         <a class="cta-a" href="#building">See What I'm Building →</a>
-        <a class="cta-b" href="#problem">My Research →</a>
+        <a class="cta-b" href="#research">My Research →</a>
         <a class="cta-c" href="#contact">Download CV</a>
       </div>
       <p class="h-collab fade-up d5">I'm always open to collaboration — feel free to reach out. (Work under the name Ananya Das)</p>
@@ -664,37 +643,6 @@ footer span{font-size:.7rem;font-weight:600;color:rgba(255,255,255,.55);letter-s
     <span class="ticker-item">LLM Evaluation <span>✦</span></span>
   </div>
 </div>
-
-<!-- THE PROBLEM -->
-<section class="section alt" id="problem">
-  <div class="s-top reveal">
-    <div class="s-eyebrow founder"><span class="s-label sl-founder">The Problem</span></div>
-    <h2 class="s-title">AI passes the test.<br/><em>Then fails the job.</em></h2>
-    <p class="s-sub">That gap is what I've built my research and my company around. It's not a niche academic puzzle — it's the core trust crisis of our moment.</p>
-  </div>
-  <div class="problem-grid">
-    <div class="prob-card reveal">
-      <div class="prob-card-label">Lab → Deployment</div>
-      <div class="prob-card-stat">Benchmarks lie.</div>
-      <div class="prob-card-text">AI systems ace evaluations built for the lab, then fail in deployment on dimensions no one scored. We test what's easy to measure, not what matters.</div>
-    </div>
-    <div class="prob-card reveal">
-      <div class="prob-card-label">Synthetic ≠ Fake</div>
-      <div class="prob-card-stat">Identity is broken.</div>
-      <div class="prob-card-text">Generative AI has made it impossible to trust what you see, hear, or read online. Detection chases symptoms after the damage is done. The fix is upstream: synthetic media that carries consent and provenance from the moment it's created.</div>
-    </div>
-    <div class="prob-card reveal">
-      <div class="prob-card-label">Policies ≠ Practice</div>
-      <div class="prob-card-stat">Governance is theatre.</div>
-      <div class="prob-card-text">Regulated industries have thorough AI accountability documents and almost no AI accountability. The gap between what's written and what's deployed is wide — and growing.</div>
-    </div>
-    <div class="prob-card reveal">
-      <div class="prob-card-label">Why me</div>
-      <div class="prob-card-stat">I study the failures. Then I build where they happen.</div>
-      <div class="prob-card-text">Most people in this space do one or the other: study AI systems from the outside, or build them without measuring what breaks. I do both. I've spent years studying where AI systems lose trust. Now I build directly inside those failure modes. My company gets diagnostic depth most builders lack. My research gets ground truth most academics can't reach.</div>
-    </div>
-  </div>
-</section>
 
 <!-- BUILDING -->
 <section class="section" id="building">
